@@ -4,8 +4,9 @@ export const theme = {
     textGreen: '#213634',
     bgTextSand: '#dfdcd9',
     darkGreen: '#1d3230',
-    darkSand: '#706f6f',
-    buttonGreen: '#2a4845'
+    darkSand: '#dbd7d4',
+    buttonGreen: '#2a4845',
+    white: '#ffffff'
   },
   fontSize: {
     xl: '96px',

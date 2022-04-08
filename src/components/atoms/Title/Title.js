@@ -7,4 +7,5 @@ export const Title = styled.h1`
   text-transform: uppercase;
   color: ${({ theme, isGreen }) => isGreen ? theme.colors.bgTextSand : theme.colors.textGreen};
   white-space: pre-line;
+  width: ${({ isLong }) => (isLong ? "88%" : "auto")};
 `

@@ -53,7 +53,7 @@ export const StyledCarousel = styled(Slider)`
   left: -3vw;
   
   .slick-arrow {
-    top: 35%;
+    top: 38%;
   }
 
   .slick-arrow::before {

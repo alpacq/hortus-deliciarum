@@ -4,7 +4,7 @@ import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 export const Wrapper = styled.div`
   width: 100%;
-  height: 10%;
+  height: 10vh;
   background: ${({ theme, isGreen }) => (isGreen ? theme.colors.darkGreen : theme.colors.darkSand)};
   display: flex;
   flex-direction: row;

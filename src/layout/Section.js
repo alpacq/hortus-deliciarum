@@ -1,11 +1,17 @@
 import React from "react"
-import { SectionWrapper } from "./Section.styles"
+import { SectionWrapper, LongSectionWrapper } from "./Section.styles"
 
-const Section = ({ id, children }) => {
+const Section = ({ id, children, isLong }) => {
   return (
-    <SectionWrapper id={id}>
-      {children}
-    </SectionWrapper>
+    <>
+      {isLong ? 
+      <LongSectionWrapper>
+        {children}
+      </LongSectionWrapper>  :
+      <SectionWrapper id={id}>
+        {children}
+      </SectionWrapper>}
+    </>
   )
 }
 

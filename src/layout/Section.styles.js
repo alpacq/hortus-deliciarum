@@ -11,3 +11,14 @@ export const SectionWrapper = styled.div`
   background: none;
   overflow: hidden;
 `
+
+export const LongSectionWrapper = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  background: none;
+`

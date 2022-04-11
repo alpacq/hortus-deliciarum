@@ -4,7 +4,7 @@ module.exports = {
     description: `Butikowa kwiaciarnia w Warszawie - miejsce tworzone rodzinną pasją umiłowania piękna`,
     siteUrl: `https://hortusdeliciarum.pl`
   },
-  plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-anchor-links", "gatsby-plugin-smoothscroll", {
+  plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-smoothscroll", {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",

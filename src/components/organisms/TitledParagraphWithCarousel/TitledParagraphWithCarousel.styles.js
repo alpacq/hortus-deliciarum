@@ -3,14 +3,11 @@ import Slider from "react-slick"
 
 export const Wrapper = styled.div`
   width: 88%;
-  height: 80%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  align-self: center;
-  justify-self: center;
-  gap: 4vh;
 `
 
 export const AnotherWrapper = styled.div`
@@ -53,12 +50,10 @@ export const StyledCarousel = styled(Slider)`
   left: -3vw;
   
   .slick-arrow {
-    top: 38%;
+    top: 35%;
   }
 
   .slick-arrow::before {
     display: none !important;
-  }
-
-  
+  }  
 `

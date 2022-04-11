@@ -8,7 +8,7 @@ const NavigationBar = ({ isGreen }) => {
         <NavigationItemWrapper>
           <NavigationItem isGreen={isGreen} to="/oferta" activeClassName="active">oferta</NavigationItem>
           <DropdownWrapper isGreen={isGreen}>
-            <SubNavigationItem isGreen={isGreen} to="/oferta">kwiaty cięte</SubNavigationItem>
+            <SubNavigationItem isGreen={isGreen} to="/oferta#ciete">kwiaty cięte</SubNavigationItem>
             <SubNavigationItem isGreen={isGreen} to="/oferta#doniczkowe">rośliny doniczkowe</SubNavigationItem>
             <SubNavigationItem isGreen={isGreen} to="/oferta#dodatki">dodatki</SubNavigationItem>
             <SubNavigationItem isGreen={isGreen} to="/oferta#aranzacja">aranżacja przestrzeni</SubNavigationItem>

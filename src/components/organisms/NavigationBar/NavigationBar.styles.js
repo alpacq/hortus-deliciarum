@@ -1,8 +1,7 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { AnchorLink } from "gatsby-plugin-anchor-links"
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.nav`
   width: 100%;
   height: 10vh;
   background: ${({ theme, isGreen }) => (isGreen ? theme.colors.darkGreen : theme.colors.darkSand)};
@@ -10,8 +9,11 @@ export const Wrapper = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  position: sticky;
+  top: 0;
+  margin: 0;
   padding: 0 12%;
-  z-index: 2;
+  z-index: 2 !important;
 `
 
 export const NavigationWrapper = styled.div`
@@ -33,7 +35,7 @@ export const DropdownWrapper = styled.div`
   left: 0;
 `
 
-export const SubNavigationItem = styled(AnchorLink)`
+export const SubNavigationItem = styled(Link)`
   color: ${({ theme, isGreen }) => (isGreen ? theme.colors.white : theme.colors.textGreen)};
   font-size: ${({ theme }) => theme.fontSize.s};
   font-weight: 400;

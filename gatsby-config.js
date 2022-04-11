@@ -4,7 +4,7 @@ module.exports = {
     description: `Butikowa kwiaciarnia w Warszawie - miejsce tworzone rodzinną pasją umiłowania piękna`,
     siteUrl: `https://hortusdeliciarum.pl`
   },
-  plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-anchor-links", {
+  plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sharp", "gatsby-transformer-sharp", "gatsby-plugin-anchor-links", "gatsby-plugin-smoothscroll", {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
@@ -35,5 +35,15 @@ module.exports = {
       // Configure the z-index of the indicator element
       zIndex: `9999`,
     },
-  },]
+  },
+  {
+    resolve: `gatsby-plugin-fixhash`,
+    options: {
+      offsetY: 0, // number, optional offset
+      scrollToOptions : {
+        // see: https://developer.mozilla.org/en-US/docs/Web/API/ScrollToOptions
+        behavior: `smooth`
+      }
+    }
+  }]
 };

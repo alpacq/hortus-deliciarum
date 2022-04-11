@@ -2,15 +2,11 @@ import styled, { createGlobalStyle } from "styled-components"
 import greenBackground from '../images/Rectangle.svg'
 
 export const GlobalStyle = createGlobalStyle`
-  html {
-    scroll-behavior: smooth;
-  }
-
   body {
     padding: 0;
     margin: 0;
     font-family: 'Montserrat';
-    overflow-x: hidden;
+    overflow-x: hidden;    
   }
 
   a, button, input {
@@ -27,6 +23,21 @@ export const Wrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
+  background-color: ${({ theme, isGreen }) => (isGreen ? theme.colors.textGreen : theme.colors.bgTextSand)};
+  background-image: ${({ isGreen }) => (isGreen ? `url(${greenBackground})` : 'none')};
+  background-repeat: ${({ isGreen }) => (isGreen ? 'repeat' : 'no-repeat')};
+  color: ${({ theme, isGreen }) => (isGreen ? theme.colors.bgTextSand : theme.colors.textGreen)};
+`
+
+export const ScrollWrapper = styled.div`
+  height: 100vh;
+  width: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 10vh;
+  scrollbar-width: none;
+  position: relative;
   background-color: ${({ theme, isGreen }) => (isGreen ? theme.colors.textGreen : theme.colors.bgTextSand)};
   background-image: ${({ isGreen }) => (isGreen ? `url(${greenBackground})` : 'none')};
   background-repeat: ${({ isGreen }) => (isGreen ? 'repeat' : 'no-repeat')};

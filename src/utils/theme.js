@@ -4,6 +4,7 @@ export const theme = {
     textGreen: '#213634',
     bgTextSand: '#dfdcd9',
     darkGreen: '#1d3230',
+    footerGreen: "#1e312f",
     darkSand: '#dbd7d4',
     buttonGreen: '#2a4845',
     white: '#ffffff'
@@ -13,6 +14,7 @@ export const theme = {
     l: '48px',
     m: '30px',
     s: '24px',
+    xs: '18px',
   },
   media: {
     desktop: '@media (min-width: 768px)'

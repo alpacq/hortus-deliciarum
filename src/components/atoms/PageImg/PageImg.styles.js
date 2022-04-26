@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Wrapper = styled.div`
-  flex: 50%;
+  flex: 40%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -9,9 +9,10 @@ export const Wrapper = styled.div`
   height: ${({ isFinal }) => (isFinal ? "100%" : "88%")};
   margin: 0;
   padding: 0;
-  align-self: ${({ isFinal }) => (isFinal ? "flex-end" : "center")};
+  position: relative;  
+  z-index: ${({ isFinal }) => (isFinal ? "999 !important;" : "1")};
 `
 
 export const StyledImage = styled.img`
-  height: 100%;
+  height: ${({ isFinal }) => (isFinal ? "95vh" : "100%")};
 `

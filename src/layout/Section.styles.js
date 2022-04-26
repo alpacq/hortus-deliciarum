@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const SectionWrapper = styled.div`
-  height: 90vh;
+  height: ${({ isFinal }) => (isFinal ? "91vh" : "calc(91vh - 40px)")};
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@ export const SectionWrapper = styled.div`
 `
 
 export const LongSectionWrapper = styled.div`
-  height: calc(100% - 10vh);
+  height: calc(100% - 9vh - 40px);
   width: 100%;
   display: flex;
   flex-direction: column;

@@ -1,5 +1,5 @@
 import React from "react"
-import arrow from "../../../images/Polygon 1.svg"
+import arrow from "../../../images/Polygon 4.svg"
 import { PrevButton } from "./CarouselArrows.styles";
 
 const PrevArrow = ({ className, style, onClick }) => (

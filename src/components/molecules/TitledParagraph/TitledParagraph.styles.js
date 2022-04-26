@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: ${({ isCarousel }) => (isCarousel ? "center" : "flex-start")};
   justify-content: ${({ isCarousel }) => (isCarousel ? "center" : "space-between")};
-  flex: 50%;
+  flex: 60%;
   white-space: pre-line;
+  align-self: ${({ isFinal }) => (isFinal ? "start" : "center")};
 `

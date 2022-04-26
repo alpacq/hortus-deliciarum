@@ -1,12 +1,19 @@
 import React from "react"
-import { Wrapper, NavigationWrapper, NavigationItemWrapper, NavigationItem, DropdownWrapper, SubNavigationItem } from "./NavigationBar.styles"
+import { Wrapper, NavigationWrapper, NavigationItemWrapper, NavigationItem, DropdownWrapper, SubNavigationItem, NavigationItemArrow } from "./NavigationBar.styles"
+import arrowSand from "../../../images/Group 22.svg"
+import arrowGreen from "../../../images/Group 22 (2).svg"
 
 const NavigationBar = ({ isGreen }) => {
   return (
     <Wrapper isGreen={isGreen}>
       <NavigationWrapper>
         <NavigationItemWrapper>
-          <NavigationItem isGreen={isGreen} to="/oferta" activeClassName="active">oferta</NavigationItem>
+          <NavigationItem isGreen={isGreen} to="/oferta" activeClassName="active">
+            oferta
+            {isGreen ? 
+            <NavigationItemArrow src={arrowSand} alt="" /> :
+            <NavigationItemArrow src={arrowGreen} alt="" />} 
+          </NavigationItem>
           <DropdownWrapper isGreen={isGreen}>
             <SubNavigationItem isGreen={isGreen} to="/oferta#ciete">kwiaty cięte</SubNavigationItem>
             <SubNavigationItem isGreen={isGreen} to="/oferta#doniczkowe">rośliny doniczkowe</SubNavigationItem>

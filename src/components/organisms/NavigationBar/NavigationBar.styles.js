@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 export const Wrapper = styled.nav`
   width: 100%;
-  height: 10vh;
+  height: 9vh;
   background: ${({ theme, isGreen }) => (isGreen ? theme.colors.darkGreen : theme.colors.darkSand)};
   display: flex;
   flex-direction: row;
@@ -69,15 +69,21 @@ export const NavigationItem = styled(Link)`
   z-index: 9;
   color: ${({ theme, isGreen }) => (isGreen ? theme.colors.bgTextSand : theme.colors.textGreen)};
   display: flex;
+  flex-direction: row;
+  gap: 15px;
   align-items: center;
   justify-content: center;
-  filter: ${({ isGreen }) => (isGreen ? "none" : "drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.28))")};
 
-  &:hover {
-    font-weight: 600;
+  &.hover {
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
   }
 
   &.active {
-    text-decoration: underline;
+    font-weight: 600;
   }
+`
+
+export const NavigationItemArrow = styled.img`
+  width: 13px;
+  height: 5.3px;
 `

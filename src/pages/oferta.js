@@ -2,6 +2,7 @@ import * as React from "react"
 import Layout from "../layout/Layout"
 import Section from "../layout/Section"
 import TitledParagraphWithImage from "../components/organisms/TitledParagraphWithImage/TitledParagraphWithImage"
+import headerImg from "../images/IMG_9633 1 (2).png"
 import flowers9x9 from "../images/Group 17.png"
 import weddingShoot from "../images/Fot-107 1.png"
 import adds1 from "../images/Rectangle 6.png"
@@ -10,39 +11,62 @@ import TitledParagraphWithCarousel from "../components/organisms/TitledParagraph
 
 const OfferPage = () => {
   const addsImages = [adds1, adds2, adds1, adds2]
+  const offerTitle = 'W naszych progach...'
+  const offerText = 'W naszej warszawskiej pracowni czekają na Was kwiaty cięte, rośliny doniczkowe oraz rękodzieło. Dla miłośników tego ostatniego mamy sojowe świece, ceramikę, biżuterię, portugalskie mydła czy kompozycje z drewna. Na zamówienie chętnie wykonamy lasy w szkle, suszone bukiety i flowerboxy.\n\nPoznajcie naszą ofertę!'
+  const cieteTitle = 'Kwiaty cięte'
+  const cieteText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+  const doniczkoweTitle = 'Rośliny doniczkowe'
+  const doniczkoweText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+  const dodatkiTitle = 'Dodatki'
+  const dodatkiText = 'Oprócz baśniowych bukietów i zachwycających roślin doniczkowych znajdziecie u nas naturalne świece sojowe, obłędnie pachnące mydła portugalskie i ręcznie wykonaną ceramikę – zarówno donice i osłonki, jak i biżuterię czy dodatki do Waszych wnętrz. Możemy też obiecać, że pomożemy wybrać doskonały prezent na każdą okazję.'
+  const aranzacjaTitle = 'Aranżacja przestrzeni'
+  const aranzacjaText = 'Poza salami weselnymi zazieleniamy Wasze balkony, pokoje, a także biura. Jeśli nie macie pomysłu jak najlepiej zagospodarować przestrzeń, potrzebujecie pomocy w wyborze roślin, które sprawdzą się w danych warunkach i nie wiecie jaką ceramikę i dodatki wybrać – z przyjemnością podejmiemy się wyzwania i tchniemy drugie życie w Wasze progi.'
+  const wynajemTitle = 'Wynajem pracowni'
+  const wynajemText = 'Jeśli szukacie przestrzeni z duszą i klimatem, gdzie stworzycie niecodzienną sesję zdjęciową, sesję ślubną lub zorganizujecie warsztaty – chętnie zaangażujemy się w podobne projekty. Na swoim koncie mamy sesje zdjęciowe, nagrania, warsztaty a nawet... teledysk.\n\nPomożemy zaaranżować pracownię wedle Waszych potrzeb.'
+
   return (      
     <Layout title="Oferta" isScrollSnap>
+      <Section>
+        <TitledParagraphWithImage 
+          title={offerTitle}
+          text={offerText}
+          imageUrl={headerImg}
+          imageAlt="rośliny doniczkowe na pianinie"
+        />
+      </Section>
       <Section id="ciete"> 
         <TitledParagraphWithImage 
-          title="kwiaty cięte"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
+          title={cieteTitle}
+          text={cieteText}
           hasButton
           buttonText="zamów bukiet"
           linkUrl="/kontakt"
+          isButtonRight
           imageUrl={flowers9x9} 
           imageAlt="bukiety artystyczne z kwiatów ciętych" />
       </Section>
       <Section id="doniczkowe"> 
         <TitledParagraphWithImage 
           isReversed
-          title="rośliny doniczkowe"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
+          title={doniczkoweTitle}
+          text={doniczkoweText}
           hasButton
           buttonText="zapytaj o okaz"
           linkUrl="/kontakt"
+          isButtonRight
           imageUrl="" 
           imageAlt="kwiaty doniczkowe" />          
       </Section>  
       <Section id="dodatki">
         <TitledParagraphWithCarousel
-          title="Dodatki"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla."
+          title={dodatkiTitle}
+          text={dodatkiText}
           imageUrls={addsImages} />
       </Section>
       <Section id="aranzacja">
         <TitledParagraphWithImage 
-          title="aranżacja przestrzeni"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
+          title={aranzacjaTitle}
+          text={aranzacjaText}
           hasButton
           buttonText="napisz do nas"
           linkUrl="/kontakt"
@@ -52,10 +76,10 @@ const OfferPage = () => {
       <Section id="wynajem">
         <TitledParagraphWithImage 
           isReversed
-          title="wynajem pracowni"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
+          title={wynajemTitle}
+          text={wynajemText}
           hasButton
-          buttonText="napisz do nas"
+          buttonText="umów termin"
           linkUrl="/kontakt"
           imageUrl={weddingShoot} 
           imageAlt="romantyczna sesja ślubna w pięknej przestrzeni z kwiatami" />

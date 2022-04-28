@@ -8,4 +8,5 @@ export const Wrapper = styled.div`
   flex: 60%;
   white-space: pre-line;
   align-self: ${({ isFinal }) => (isFinal ? "start" : "center")};
+  z-index: 99 !important;
 `

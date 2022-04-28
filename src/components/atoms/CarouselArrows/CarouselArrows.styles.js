@@ -1,9 +1,18 @@
 import styled from "styled-components"
 
 export const PrevButton = styled.button`
-  border: 0;
+  position: absolute;
+  cursor: pointer;
+  left: 50px;
+  border: none;
+  background: transparent;
+  z-index: 999 !important;
 `
 
 export const NextButton = styled.button`
-  border: 0;
+  position: absolute;
+  cursor: pointer;
+  right: 50px;
+  border: none; background: transparent;
+  z-index: 999 !important;
 `

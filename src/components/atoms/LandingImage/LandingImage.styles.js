@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   right: 0;
   top: 0;
   pointer-events: none;
-  z-index: ${({ isTop }) => (isTop ? "3 !important;" : "0")};
+  z-index: ${({ isTop }) => (isTop ? "101 !important;" : "0")};
 `
 
 export const StyledImage = styled.img`

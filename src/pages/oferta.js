@@ -4,20 +4,38 @@ import Section from "../layout/Section"
 import TitledParagraphWithImage from "../components/organisms/TitledParagraphWithImage/TitledParagraphWithImage"
 import headerImg from "../images/IMG_9633 1 (2).png"
 import flowers9x9 from "../images/Group 17.png"
+import donica from "../images/IMG_9633 1 (3).png"
 import weddingShoot from "../images/Fot-107 1.png"
-import adds1 from "../images/Rectangle 6.png"
-import adds2 from "../images/Rectangle 7.png"
+import adds1 from "../images/adds (1).png"
+import adds2 from "../images/adds (2).png"
+import adds3 from "../images/adds (3).png"
+import adds4 from "../images/adds (4).png"
+import adds5 from "../images/adds (5).png"
+import adds6 from "../images/adds (6).png"
+import adds7 from "../images/adds (7).png"
+import adds8 from "../images/adds (8).png"
+import adds9 from "../images/adds (9).png"
+import adds10 from "../images/adds (10).png"
+import aranz from "../images/aranz.png"
+import wyn1 from "../images/wynajem (1).png"
+import wyn2 from "../images/wynajem (2).png"
+import wyn3 from "../images/wynajem (3).png"
+import wyn4 from "../images/wynajem (4).png"
+import wyn5 from "../images/wynajem (5).png"
+import wyn6 from "../images/wynajem (6).png"
 import TitledParagraphWithCarousel from "../components/organisms/TitledParagraphWithCarousel/TitledParagraphWithCarousel"
+import TitledParagraphWithSideCarousel from "../components/organisms/TitledParagraphWithSideCarousel/TitledParagraphWithSideCarousel"
 
 const OfferPage = () => {
-  const addsImages = [adds1, adds2, adds1, adds2]
+  const addsImages = [adds1, adds2, adds3, adds4, adds5, adds6, adds7, adds8, adds9, adds10]
+  const wynImages = [weddingShoot, wyn1, wyn6, wyn5, wyn4, wyn3, wyn2]
   const offerTitle = 'W naszych progach...'
   const offerText = 'W naszej warszawskiej pracowni czekają na Was kwiaty cięte, rośliny doniczkowe oraz rękodzieło. Dla miłośników tego ostatniego mamy sojowe świece, ceramikę, biżuterię, portugalskie mydła czy kompozycje z drewna. Na zamówienie chętnie wykonamy lasy w szkle, suszone bukiety i flowerboxy.\n\nPoznajcie naszą ofertę!'
   const cieteTitle = 'Kwiaty cięte'
   const cieteText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
   const doniczkoweTitle = 'Rośliny doniczkowe'
   const doniczkoweText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
-  const dodatkiTitle = 'Dodatki'
+  const dodatkiTitle = 'Jeszcze więcej piękna'
   const dodatkiText = 'Oprócz baśniowych bukietów i zachwycających roślin doniczkowych znajdziecie u nas naturalne świece sojowe, obłędnie pachnące mydła portugalskie i ręcznie wykonaną ceramikę – zarówno donice i osłonki, jak i biżuterię czy dodatki do Waszych wnętrz. Możemy też obiecać, że pomożemy wybrać doskonały prezent na każdą okazję.'
   const aranzacjaTitle = 'Aranżacja przestrzeni'
   const aranzacjaText = 'Poza salami weselnymi zazieleniamy Wasze balkony, pokoje, a także biura. Jeśli nie macie pomysłu jak najlepiej zagospodarować przestrzeń, potrzebujecie pomocy w wyborze roślin, które sprawdzą się w danych warunkach i nie wiecie jaką ceramikę i dodatki wybrać – z przyjemnością podejmiemy się wyzwania i tchniemy drugie życie w Wasze progi.'
@@ -54,7 +72,7 @@ const OfferPage = () => {
           buttonText="zapytaj o okaz"
           linkUrl="/kontakt"
           isButtonRight
-          imageUrl="" 
+          imageUrl={donica} 
           imageAlt="kwiaty doniczkowe" />          
       </Section>  
       <Section id="dodatki">
@@ -70,19 +88,18 @@ const OfferPage = () => {
           hasButton
           buttonText="napisz do nas"
           linkUrl="/kontakt"
-          imageUrl=""
+          imageUrl={aranz}
           imageAlt="aranżacja przestrzeni" />
       </Section>
       <Section id="wynajem">
-        <TitledParagraphWithImage 
+        <TitledParagraphWithSideCarousel 
           isReversed
           title={wynajemTitle}
           text={wynajemText}
           hasButton
           buttonText="umów termin"
           linkUrl="/kontakt"
-          imageUrl={weddingShoot} 
-          imageAlt="romantyczna sesja ślubna w pięknej przestrzeni z kwiatami" />
+          imageUrls={wynImages} />
       </Section>
     </Layout>    
   )

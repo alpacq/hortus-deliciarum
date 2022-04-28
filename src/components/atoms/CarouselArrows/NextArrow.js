@@ -3,7 +3,7 @@ import arrow from "../../../images/Polygon 5.svg"
 import { NextButton } from "./CarouselArrows.styles";
 
 const NextArrow = ({ className, style, onClick }) => (
-  <NextButton style={{...style}} onClick={onClick} className={className}>
+  <NextButton onClick={onClick} className={className}>
     <img src={arrow} alt="" />
   </NextButton>
 );

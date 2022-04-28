@@ -6,7 +6,7 @@ export const SectionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: ${({ isCB }) => (isCB ? "flex-start" : "center")};
   position: relative;
   background: none;
   overflow: hidden;
@@ -14,7 +14,8 @@ export const SectionWrapper = styled.div`
 `
 
 export const LongSectionWrapper = styled.div`
-  height: calc(100% - 9vh - 40px);
+  margin-top: ${({ isMulti }) => (isMulti ? "5vh" : "0")};
+  height: ${({ isMulti, longSectionHeight }) => (isMulti ? `calc(${longSectionHeight} * (91vh - 40px))` : "calc(100% - 9vh - 40px)")};
   width: 100%;
   display: flex;
   flex-direction: column;

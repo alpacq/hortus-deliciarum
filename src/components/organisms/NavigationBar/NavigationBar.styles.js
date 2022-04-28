@@ -13,7 +13,7 @@ export const Wrapper = styled.nav`
   top: 0;
   margin: 0;
   padding: 0 12%;
-  z-index: 2 !important;
+  z-index: 100 !important;
 `
 
 export const NavigationWrapper = styled.div`
@@ -41,7 +41,7 @@ export const SubNavigationItem = styled(Link)`
   font-weight: 400;
   cursor: pointer;
   text-decoration: none;
-  z-index: 11;
+  z-index: 999;
   background: none;
   padding: 0.5rem 1rem;
 
@@ -66,7 +66,7 @@ export const NavigationItem = styled(Link)`
   font-size: ${({ theme }) => theme.fontSize.s};
   font-weight: 400;
   cursor: pointer;
-  z-index: 9;
+  z-index: 999;
   color: ${({ theme, isGreen }) => (isGreen ? theme.colors.bgTextSand : theme.colors.textGreen)};
   display: flex;
   flex-direction: row;

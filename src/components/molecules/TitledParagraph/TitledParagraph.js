@@ -5,7 +5,7 @@ import { Title } from "../../atoms/Title/Title"
 import BigSocialsBar from "../BigSocialsBar/BigSocialsBar"
 import { Wrapper } from "./TitledParagraph.styles"
 
-const TitledParagraph = ({ isCarousel, isFinal, title, text, isGreen, hasButton, buttonText="", linkUrl="/", isButtonRight }) => {
+const TitledParagraph = ({ isCarousel, isFinal, title, text, isGreen, hasButton, isButtonBig, buttonText="", linkUrl="/", isButtonRight }) => {
   const richText = {
     __html: text
   }
@@ -13,7 +13,7 @@ const TitledParagraph = ({ isCarousel, isFinal, title, text, isGreen, hasButton,
     <Wrapper isCarousel={isCarousel} isFinal={isFinal}>
       <Title isGreen={isGreen}>{title}</Title>
       <Paragraph isGreen={isGreen} dangerouslySetInnerHTML={richText} />
-      {(hasButton ? <Button isRight={isButtonRight} to={linkUrl}>{buttonText}</Button> : null)}
+      {(hasButton ? <Button isBig={isButtonBig} isRight={isButtonRight} to={linkUrl}>{buttonText}</Button> : null)}
       {(isFinal ? <BigSocialsBar isGreen={isGreen} /> : null)}
     </Wrapper>
   )

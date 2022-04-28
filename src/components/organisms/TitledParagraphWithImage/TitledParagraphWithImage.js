@@ -3,7 +3,7 @@ import TitledParagraph from "../../molecules/TitledParagraph/TitledParagraph"
 import PageImg from "../../atoms/PageImg/PageImg"
 import { Wrapper } from "./TitledParagraphWithImage.styles"
 
-const TitledParagraphWithImage = ({ isReversed, isFinal, title, text, isGreen, hasButton, buttonText="", linkUrl="/", isButtonRight, imageUrl, imageAlt }) => {
+const TitledParagraphWithImage = ({ isReversed, isFinal, title, text, isGreen, hasButton, isButtonBig, buttonText="", linkUrl="/", isButtonRight, imageUrl, imageAlt }) => {
   return (
     <>
       {isReversed ? 
@@ -15,6 +15,7 @@ const TitledParagraphWithImage = ({ isReversed, isFinal, title, text, isGreen, h
           text={text}
           isGreen={isGreen}
           hasButton={hasButton}
+          isButtonBig={isButtonBig}
           buttonText={buttonText}
           linkUrl={linkUrl}
           isButtonRight={isButtonRight} />
@@ -26,6 +27,7 @@ const TitledParagraphWithImage = ({ isReversed, isFinal, title, text, isGreen, h
           text={text}
           isGreen={isGreen}
           hasButton={hasButton}
+          isButtonBig={isButtonBig}
           buttonText={buttonText}
           linkUrl={linkUrl}
           isButtonRight={isButtonRight} />

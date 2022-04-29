@@ -7,7 +7,12 @@ export const theme = {
     footerGreen: "#1e312f",
     darkSand: '#dbd7d4',
     buttonGreen: '#2a4845',
-    white: '#ffffff'
+    inputBg: '#eeeeee',
+    inputText: '#a4a4a4',
+    sentBtn: '#c4c4c4',
+    sentBtnShadow: '#cecece',
+    white: '#ffffff',
+    red: '#ff6161'
   },
   fontSize: {
     xl: '96px',
@@ -15,6 +20,7 @@ export const theme = {
     m: '30px',
     s: '24px',
     xs: '18px',
+    xxs: '15px'
   },
   media: {
     desktop: '@media (min-width: 768px)'

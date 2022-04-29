@@ -12,7 +12,7 @@ const TitledParagraph = ({ isCarousel, isFinal, title, text, isGreen, hasButton,
   return (
     <Wrapper isCarousel={isCarousel} isFinal={isFinal}>
       <Title isGreen={isGreen}>{title}</Title>
-      <Paragraph isGreen={isGreen} dangerouslySetInnerHTML={richText} />
+      <Paragraph isCarousel={isCarousel} isGreen={isGreen} dangerouslySetInnerHTML={richText} />
       {(hasButton ? <Button isBig={isButtonBig} isRight={isButtonRight} to={linkUrl}>{buttonText}</Button> : null)}
       {(isFinal ? <BigSocialsBar isGreen={isGreen} /> : null)}
     </Wrapper>

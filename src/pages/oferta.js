@@ -16,6 +16,9 @@ import adds7 from "../images/adds (7).png"
 import adds8 from "../images/adds (8).png"
 import adds9 from "../images/adds (9).png"
 import adds10 from "../images/adds (10).png"
+import adds11 from "../images/adds (11).png"
+import adds12 from "../images/adds (12).png"
+import adds13 from "../images/adds (13).png"
 import aranz from "../images/aranz.png"
 import wyn1 from "../images/wynajem (1).png"
 import wyn2 from "../images/wynajem (2).png"
@@ -27,7 +30,7 @@ import TitledParagraphWithCarousel from "../components/organisms/TitledParagraph
 import TitledParagraphWithSideCarousel from "../components/organisms/TitledParagraphWithSideCarousel/TitledParagraphWithSideCarousel"
 
 const OfferPage = () => {
-  const addsImages = [adds1, adds2, adds3, adds4, adds5, adds6, adds7, adds8, adds9, adds10]
+  const addsImages = [adds1, adds2, adds3, adds4, adds5, adds6, adds7, adds8, adds9, adds10, adds11, adds12, adds13]
   const wynImages = [weddingShoot, wyn1, wyn6, wyn5, wyn4, wyn3, wyn2]
   const offerTitle = 'W naszych progach...'
   const offerText = 'W naszej warszawskiej pracowni czekają na Was kwiaty cięte, rośliny doniczkowe oraz rękodzieło. Dla miłośników tego ostatniego mamy sojowe świece, ceramikę, biżuterię, portugalskie mydła czy kompozycje z drewna. Na zamówienie chętnie wykonamy lasy w szkle, suszone bukiety i flowerboxy.\n\nPoznajcie naszą ofertę!'
@@ -36,7 +39,7 @@ const OfferPage = () => {
   const doniczkoweTitle = 'Rośliny doniczkowe'
   const doniczkoweText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
   const dodatkiTitle = 'Jeszcze więcej piękna'
-  const dodatkiText = 'Oprócz baśniowych bukietów i zachwycających roślin doniczkowych znajdziecie u nas naturalne świece sojowe, obłędnie pachnące mydła portugalskie i ręcznie wykonaną ceramikę – zarówno donice i osłonki, jak i biżuterię czy dodatki do Waszych wnętrz. Możemy też obiecać, że pomożemy wybrać doskonały prezent na każdą okazję.'
+  const dodatkiText = 'Oprócz baśniowych bukietów i zachwycających roślin doniczkowych znajdziecie u nas naturalne świece sojowe, obłędnie pachnące mydła portugalskie i ręcznie wykonaną ceramikę – zarówno donice, osłonki, jak i biżuterię czy dodatki do Waszych wnętrz. Na zamówienie wykonamy las w szkle. Możemy też obiecać, że pomożemy wybrać doskonały prezent na każdą okazję.'
   const aranzacjaTitle = 'Aranżacja przestrzeni'
   const aranzacjaText = 'Poza salami weselnymi zazieleniamy Wasze balkony, pokoje, a także biura. Jeśli nie macie pomysłu jak najlepiej zagospodarować przestrzeń, potrzebujecie pomocy w wyborze roślin, które sprawdzą się w danych warunkach i nie wiecie jaką ceramikę i dodatki wybrać – z przyjemnością podejmiemy się wyzwania i tchniemy drugie życie w Wasze progi.'
   const wynajemTitle = 'Wynajem pracowni'
@@ -58,7 +61,7 @@ const OfferPage = () => {
           text={cieteText}
           hasButton
           buttonText="zamów bukiet"
-          linkUrl="/kontakt"
+          linkUrl="/formularz"
           isButtonRight
           imageUrl={flowers9x9} 
           imageAlt="bukiety artystyczne z kwiatów ciętych" />
@@ -70,7 +73,7 @@ const OfferPage = () => {
           text={doniczkoweText}
           hasButton
           buttonText="zapytaj o okaz"
-          linkUrl="/kontakt"
+          linkUrl="/formularz"
           isButtonRight
           imageUrl={donica} 
           imageAlt="kwiaty doniczkowe" />          
@@ -87,7 +90,7 @@ const OfferPage = () => {
           text={aranzacjaText}
           hasButton
           buttonText="napisz do nas"
-          linkUrl="/kontakt"
+          linkUrl="/formularz"
           imageUrl={aranz}
           imageAlt="aranżacja przestrzeni" />
       </Section>
@@ -98,7 +101,7 @@ const OfferPage = () => {
           text={wynajemText}
           hasButton
           buttonText="umów termin"
-          linkUrl="/kontakt"
+          linkUrl="/formularz"
           imageUrls={wynImages} />
       </Section>
     </Layout>    

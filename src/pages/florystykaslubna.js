@@ -20,10 +20,10 @@ import wed6 from "../images/wedding (6).png"
 import wed7 from "../images/wedding (7).png"
 import wed8 from "../images/wedding (8).png"
 import wed9 from "../images/wedding (9).png"
+import ornament from "../images/ozdwed.svg"
 import ColImg from "../components/atoms/ColImg/ColImg"
 import { Paragraph } from "../components/atoms/Paragraph/Paragraph"
-import Carousel from "../components/molecules/Carousel/Carousel"
-import { Button } from "../components/atoms/Button/Button"
+import CarouselWithButton from "../components/organisms/CarouselWithButton/CarouselWithButton"
 
 const WeddingsPage = () => {
   const weddingsTitle = "Ślub jak z bajki"
@@ -33,7 +33,7 @@ const WeddingsPage = () => {
   const wedImages = [wed9, wed8, wed7, wed6, wed5, wed4, wed3, wed2, wed1]
 
   return (
-    <Layout title="Florystyka ślubna" screensHeight={4.62}>
+    <Layout title="Florystyka ślubna" screensHeight={4.8}>
       <Section>
         <TitledParagraphWithImage
           title={weddingsTitle}
@@ -43,9 +43,9 @@ const WeddingsPage = () => {
           hasButton
           isButtonBig
           buttonText="skontaktuj się z nami"
-          linkUrl="/kontakt" />
+          linkUrl="/formularz" />
       </Section>
-      <Section isLong isMulti longSectionHeight={2.1}>
+      <Section isLong isMulti longSectionHeight={2.4}>
         <LongTable>
           <LongColumn>
             <ColImg imageUrl={img1col1} imageAlt="" />
@@ -58,6 +58,7 @@ const WeddingsPage = () => {
             <Paragraph>
               <strong>{strongText}</strong>
             </Paragraph>
+            <ColImg isAbsolute imageUrl={ornament} imageAlt="" absHeight={214} />
             <ColImg imageUrl={img1col2} imageAlt="" />
             <ColImg imageUrl={img2col2} imageAlt="" />
           </LongColumn>
@@ -73,9 +74,8 @@ const WeddingsPage = () => {
           </LongColumn>
         </LongTable>        
       </Section>
-      <Section isCB> 
-        <Carousel imageUrls={wedImages} moveBy={100} numSlides={9} visibleSlides={1} />
-        <Button isBig isCentered to="/kontakt">umów się na spotkanie</Button>
+      <Section> 
+        <CarouselWithButton imageUrls={wedImages} moveBy={100} numSlides={9} visibleSlides={1} buttonText="umów się na spotkanie" linkUrl="/formularz" />
       </Section>
     </Layout>
   )

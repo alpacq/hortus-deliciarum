@@ -15,7 +15,7 @@ const TitledParagraphWithCarousel = ({ title, text, isGreen, imageUrls }) => {
           isGreen={isGreen} />
       </TextWrapper>
       <SliderWrapper>
-        <Carousel imageUrls={imageUrls} moveBy={29} numSlides={10} visibleSlides={3}/>
+        <Carousel imageUrls={imageUrls} moveBy={29} numSlides={13} visibleSlides={3}/>
       </SliderWrapper>
     </Wrapper>
   )

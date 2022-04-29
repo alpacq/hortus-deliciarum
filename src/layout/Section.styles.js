@@ -1,12 +1,12 @@
 import styled from "styled-components"
 
 export const SectionWrapper = styled.div`
-  height: ${({ isFinal }) => (isFinal ? "91vh" : "calc(91vh - 40px)")};
+  height: ${({ isFinal }) => (isFinal ? "91vh" : "calc(91vh - 40px) !important")};
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: ${({ isCB }) => (isCB ? "flex-start" : "center")};
+  justify-content: center;
   position: relative;
   background: none;
   overflow: hidden;

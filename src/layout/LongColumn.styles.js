@@ -6,6 +6,6 @@ export const ColumnWrapper = styled.div`
   flex-direction: column;
   justify-content: ${({ isSmall }) => (isSmall ? "center" : "flex-start")};
   align-items: ${({ isSmall }) => (isSmall ? "center" : "flex-start")};
-  flex: 1;
-  gap: 3vh;
+  flex: ${({ flexVal }) => flexVal};
+  gap: 2vh;
 `

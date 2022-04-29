@@ -6,11 +6,12 @@ import { theme } from "../utils/theme"
 import logo from "../images/favicon.svg"
 import NavigationBar from "../components/organisms/NavigationBar/NavigationBar"
 import Footer from "../components/organisms/Footer/Footer"
+import { FooterLinkTextProvider } from "../providers/FooterLinkTextProvider"
 
 const Layout = ({ title, isScrollSnap, isGreen, screensHeight, children }) => {
   return (
     <ThemeProvider theme={theme}>
-      <>
+      <FooterLinkTextProvider>
         <GlobalStyle />
         <Helmet>
           <meta charSet="utf-8" />
@@ -28,7 +29,7 @@ const Layout = ({ title, isScrollSnap, isGreen, screensHeight, children }) => {
           {children}
           <Footer isGreen={isGreen} />
         </Wrapper>)}
-      </>
+      </FooterLinkTextProvider>
     </ThemeProvider>
   )
 }

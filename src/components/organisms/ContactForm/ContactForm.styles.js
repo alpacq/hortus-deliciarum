@@ -93,6 +93,7 @@ export const SendButton = styled.button`
   align-self: flex-end;
   cursor: pointer;
   margin-top: 0.67em;
+  border: none;
 `
 
 export const StyledOrnament = styled.img`

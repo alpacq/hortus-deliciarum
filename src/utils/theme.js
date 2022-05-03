@@ -9,6 +9,7 @@ export const theme = {
     buttonGreen: '#2a4845',
     inputBg: '#eeeeee',
     inputText: '#a4a4a4',
+    clickedBtn: '#395f5b',
     sentBtn: '#c4c4c4',
     sentBtnShadow: '#cecece',
     white: '#ffffff',

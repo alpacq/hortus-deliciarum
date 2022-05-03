@@ -27,12 +27,11 @@ export const StyledColumn = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 2vh;
 `
-
 export const StyledInput = styled.input`
   width: 100%;
   height: 7vh;
+  margin-bottom: ${({ isError }) => (isError ? "0" : "2vh")};
   padding: 0 1em;
   border-radius: 10px;
   background: ${({ theme }) => theme.colors.inpuBg};
@@ -44,16 +43,14 @@ export const StyledInput = styled.input`
   justify-content: center;
   outline: none;
   border: none;
-
-  &.invalid {
-    box-shadow: ${({ theme }) => `0px 4px 10px ${theme.colors.red}`};
-  }
+  box-shadow: ${({ theme, isError }) => (isError ? `0px 4px 10px ${theme.colors.red}` : "none")};
 `
 
 export const StyledTextArea = styled.textarea`
   width: 100%;
   height: 38vh;
   padding: 1em;
+  margin-bottom: ${({ isError }) => (isError ? "0" : "2vh")};
   border-radius: 10px;
   font-family: inherit;
   background: ${({ theme }) => theme.colors.inpuBg};
@@ -64,10 +61,7 @@ export const StyledTextArea = styled.textarea`
   justify-content: center;
   outline: none;
   border: none;
-
-  &.invalid {
-    box-shadow: ${({ theme }) => `0px 4px 10px ${theme.colors.red}`};
-  }
+  box-shadow: ${({ theme, isError }) => (isError ? `0px 4px 10px ${theme.colors.red}` : "none")};
 `
 
 export const StyledInfo = styled.p`
@@ -76,6 +70,7 @@ export const StyledInfo = styled.p`
   font-size: ${({ theme }) => theme.fontSize.xxs};
   color: ${({ theme, isError }) => (isError ? theme.colors.red : theme.colors.textGreen)};
   opacity: ${({ isError }) => (isError ? "1" : "0.4")};
+  margin: 0.5vh;
 `
 
 export const SendButton = styled.button`
@@ -87,7 +82,7 @@ export const SendButton = styled.button`
   height: 7vh;
   font-size: ${({ theme }) => theme.fontSize.m};
   color: ${({ theme, isSent }) => (isSent ? theme.colors.textGreen : theme.colors.bgTextSand)};
-  background: ${({ theme, isSent }) => (isSent ? theme.colors.sentBtn : theme.colors.buttonGreen)};
+  background: ${({ theme, isSent, isClicked }) => (isSent ? theme.colors.sentBtn : isClicked ? theme.colors.clickedBtn : theme.colors.buttonGreen)};
   box-shadow: 0px 4px 4px ${({ theme, isSent }) => (isSent ? theme.colors.sentBtnShadow : theme.colors.textGreen)};
   border-radius: 10px;
   align-self: flex-end;

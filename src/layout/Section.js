@@ -1,14 +1,14 @@
 import React from "react"
 import { SectionWrapper, LongSectionWrapper } from "./Section.styles"
 
-const Section = ({ id, children, isLong , isFinal, isMulti, longSectionHeight=0 }) => {
+const Section = ({ id, children, isLong , isFinal }) => {
   return (
     <>
       {isLong ? 
-      <LongSectionWrapper isMulti={isMulti} longSectionHeight={longSectionHeight}>
+      <LongSectionWrapper>
         {children}
       </LongSectionWrapper> :
-      <SectionWrapper id={id} isFinal={isFinal} isMulti={isMulti} longSectionHeight={longSectionHeight}>
+      <SectionWrapper id={id} isFinal={isFinal}>
       {children}
     </SectionWrapper>}
     </>

@@ -5,5 +5,5 @@ export const Paragraph = styled.p`
   font-weight: 400;
   line-height: 40px;
   color: ${({ theme, isGreen }) => (isGreen ? theme.colors.bgTextSand : theme.colors.textGreen)};
-  text-align: ${({ isCarousel }) => (isCarousel ? "center" : "left")};
+  text-align: ${({ isCarousel }) => (isCarousel ? "center" : "justify")};
 `

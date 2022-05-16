@@ -53,7 +53,7 @@ export const StyledTextArea = styled.textarea`
   margin-bottom: ${({ isError }) => (isError ? "0" : "2vh")};
   border-radius: 10px;
   font-family: inherit;
-  background: ${({ theme }) => theme.colors.inpuBg};
+  background: ${({ theme }) => theme.colors.inputBg};
   font-weight: 500;
   font-style: normal;
   font-size: ${({ theme }) => theme.fontSize.m};

@@ -14,11 +14,11 @@ export const SectionWrapper = styled.div`
 `
 
 export const LongSectionWrapper = styled.div`
-  width: 100%;
+  width: 73%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   position: relative;
   background: none;
 `

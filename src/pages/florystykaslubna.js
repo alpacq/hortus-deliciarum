@@ -1,16 +1,16 @@
 import * as React from "react"
 import Layout from "../layout/Layout"
 import Section from "../layout/Section"
-import TitledParagraphWithImage from "../components/organisms/TitledParagraphWithImage/TitledParagraphWithImage"
-import weddingComposition from "../images/Dominika&Bartłomiej_298 2.png"
+import { Button } from "../components/atoms/Button/Button"
 import LongTable from "../layout/LongTable"
 import LongColumn from "../layout/LongColumn"
-import img1col1 from "../images/img1col1.png"
-import img2col1 from "../images/img2col1.png"
-import img3col1 from "../images/img3col1.png"
-import img1col2 from "../images/img1col2.png"
-import img2col2 from "../images/img2col2.png"
-import img3col2 from "../images/img3col2.png"
+import wedA from "../images/wedA.png"
+import wedB from "../images/wedB.png"
+import wedC from "../images/wedC.png"
+import wedD from "../images/wedD.png"
+import wedE from "../images/wedE.png"
+import ornament from "../images/titleOrnament.svg"
+import wedFirst from "../images/wedFirst.png"
 import wed1 from "../images/wedding (1).png"
 import wed2 from "../images/wedding (2).png"
 import wed3 from "../images/wedding (3).png"
@@ -19,64 +19,55 @@ import wed5 from "../images/wedding (5).png"
 import wed6 from "../images/wedding (6).png"
 import wed7 from "../images/wedding (7).png"
 import wed8 from "../images/wedding (8).png"
-import wed9 from "../images/wedding (9).png"
-import ornament from "../images/ozdwed.svg"
+import wedLast from "../images/wedLast.png"
+import OrnamentImg from "../components/atoms/OrnamentImg/OrnamentImg"
 import ColImg from "../components/atoms/ColImg/ColImg"
 import { Paragraph } from "../components/atoms/Paragraph/Paragraph"
 import CarouselWithButton from "../components/organisms/CarouselWithButton/CarouselWithButton"
+import CenteredTitle from "../components/molecules/CenteredTitle/CenteredTitle"
 
 const WeddingsPage = () => {
-  const weddingsTitle = "Ślub jak z bajki"
-  const weddingsText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, "
+  const title = "Ślub jak z bajki"
+  const firstPar = "Oferujemy aranżację wesela od A do Z. Możecie być więc spokojni o bukiet ślubny, butonierki czy podarunki dla rodziców. Wyczarujemy dla Was także najpiękniejszy wianek ślubny. Nasze doświadczenie rękodzielnicze, artystyczne i florystyczne sprawia, że każda ślubna aranżacja dopięta jest na ostatni guzik."
+  const secondPar = "Wybrane przez Was sale weselne traktujemy jak czyste płótno – wykańczamy je z dbałością o najmniejszy szczegół."
+  const thirdPar = "Będziemy zaszczyceni mogąc zatroszczyć się o Wasze ślubne przedsięwzięcie! Nasz kalendarz na 2022 rok pozostaje otwarty. Jeśli więc szukacie florystek ślubnych w Warszawie i okolicach – zapraszamy do kontaktu!"
   const additionalText = "Każdą zainteresowaną współpracą z nami Parę Młodą zapraszamy do pracowni, aby ustalić wspólnie zamysł, estetykę i budżet. Cena florystyki ślubnej zależy od Waszego pomysłu, a co za tym idzie – ilości dekoracji. Po spotkaniu wyślemy spersonalizowaną ofertę wraz z wyceną. Do Was należy ostateczna decyzja."
   const strongText = "Niezależnie od tego czy bliższe Waszemu sercu są klimaty boho czy glamour – możemy obiecać, że stworzymy dla Was coś pięknego."
-  const wedImages = [wed9, wed8, wed7, wed6, wed5, wed4, wed3, wed2, wed1]
+  const wedImages = [wedFirst, wed8, wed7, wed6, wed5, wed4, wed3, wed2, wed1, wedLast]
 
   return (
-    <Layout title="Florystyka ślubna" screensHeight={4.8}>
-      <Section>
-        <TitledParagraphWithImage
-          title={weddingsTitle}
-          text={weddingsText}
-          imageUrl={weddingComposition}
-          imageAlt="weselna kompozycja kwiatowa"
-          hasButton
-          isButtonBig
-          buttonText="skontaktuj się z nami"
-          linkUrl="/formularz" />
-      </Section>
-      <Section isLong isMulti longSectionHeight={2.4}>
+    <Layout title="Florystyka ślubna" >
+      <Section isLong>
+        <CenteredTitle title={title} />
+        <OrnamentImg imageUrl={ornament} imageAlt="" />
+        <Paragraph>{firstPar}</Paragraph>
+        <Paragraph><strong>{secondPar}</strong></Paragraph>
+        <Paragraph>{thirdPar}</Paragraph>
+        <Button isBig isCentered to="/formularz">skontaktuj się z nami</Button>
         <LongTable>
           <LongColumn>
-            <ColImg imageUrl={img1col1} imageAlt="" />
-            <ColImg imageUrl={img2col1} imageAlt="" />
+            <ColImg imageUrl={wedA} imageAlt="" />
           </LongColumn>
           <LongColumn>
-            <Paragraph>
-              {additionalText}
-            </Paragraph>
-            <Paragraph>
-              <strong>{strongText}</strong>
-            </Paragraph>
-            <ColImg isAbsolute imageUrl={ornament} imageAlt="" absHeight={214} />
-            <ColImg imageUrl={img1col2} imageAlt="" />
-            <ColImg imageUrl={img2col2} imageAlt="" />
+            <ColImg imageUrl={wedB} imageAlt="" />
+          </LongColumn>
+        </LongTable>
+        <Paragraph>{additionalText}</Paragraph>
+        <Paragraph><strong>{strongText}</strong></Paragraph>
+        <ColImg imageUrl={wedC} imageAlt="" />
+        <LongTable>
+          <LongColumn>
+            <ColImg imageUrl={wedD} imageAlt="" />
+          </LongColumn>
+          <LongColumn>
+            <ColImg imageUrl={wedE} imageAlt="" />
           </LongColumn>
         </LongTable>
       </Section>
       <Section>
-        <LongTable>
-          <LongColumn isSmall>
-            <ColImg isSmall imageUrl={img3col1} imageAlt="" />
-          </LongColumn>
-          <LongColumn isSmall>
-            <ColImg isSmall imageUrl={img3col2} imageAlt="" />
-          </LongColumn>
-        </LongTable>        
+        <CarouselWithButton imageUrls={wedImages} moveBy={100} numSlides={10} visibleSlides={1} buttonText="umów się na spotkanie" linkUrl="/formularz" />
       </Section>
-      <Section> 
-        <CarouselWithButton imageUrls={wedImages} moveBy={100} numSlides={9} visibleSlides={1} buttonText="umów się na spotkanie" linkUrl="/formularz" />
-      </Section>
+      <Button isBig isCentered to="/formularz">umów się na spotkanie</Button>
     </Layout>
   )
 }

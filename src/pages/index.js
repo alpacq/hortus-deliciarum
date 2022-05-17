@@ -14,13 +14,14 @@ import finalFlower from "../images/blue 1.svg"
 
 const IndexPage = () => {
   const offerTitle = 'Oferta'
-  const offerText = 'Choć specjalizujemy się w bukietach, w tym także bukietach ślubnych,i zazielenianiu Waszych mieszkań, świeże kwiaty cięte i rośliny doniczkowe to tylko część piękna, które czeka w progach naszej pracowni na Starych Bielanach...'
+  const offerText = 'Choć specjalizujemy się w bukietach, w tym także bukietach ślubnych, i zazielenianiu Waszych mieszkań, świeże kwiaty cięte i rośliny doniczkowe to tylko część piękna, które czeka w progach naszej pracowni na Starych Bielanach...'
   const weddingTitle = 'Florystyka ślubna'
-  const weddingText = 'Dobrze wiemy (z własnego doświadczenia!) z jakim stresem wiąże się organizacja wesela. Nasze doświadczenie rękodzielnicze, artystyczne i florystyczne sprawia, że każda ślubna aranżacja dopięta jest na ostatni guzik. Będziemy zaszczyceni mogąc zatroszczyć się o Wasze sale weselne, ślubne bukiety, wianki czy podarunki dla rodziców.'
+  const weddingText = 'Nasze doświadczenie rękodzielnicze, artystycznei florystyczne sprawia, że każda ślubna aranżacja dopięta jest na ostatni guzik. Będziemy zaszczyceni mogąc zatroszczyć się o Wasze sale weselne, ślubne bukiety, wianki czy podarunki dla rodziców.'
   const meetUsTitle = 'Poznaj nas'
   const meetUsText = 'Szukasz kwiaciarni w Warszawie? Sami określilibyśmy się raczej jako mała, rodzinna pracownia florystyczna. Hortus Deliciarum to miejsce z duszą, powstałe z potrzeby tworzenia i dzielenia się pięknem.'
   const contactTitle = 'Czekamy na ciebie'
   const contactInfo = "adres\nul. Jana Kasprowicza 68, lok. 3c\n01-949 Warszawa\n\ngodziny otwarcia\nponiedziałek – piątek: 10.00 - 19.00\nsobota: 10.00 - 16.00\n\n\nkontakt\ntel. +48 519 059 013\ne-mail: kontakt@hortusdeliciarum.pl"
+  const mottoText = "Miejsce tworzone rodzinną pasją umiłowania piękna."
 
   return (
     <Layout isScrollSnap title="Hortus Deliciarum" isGreen>
@@ -28,7 +29,7 @@ const IndexPage = () => {
       <LandingImage imageUrl={flower} isTop />
       <LogoTitle />
       <Section id="mainpage">        
-        <Motto />
+        <Motto isAbsolute isLarge isGreen text={mottoText} />
       </Section>
       <Section>
         <TitledParagraphWithImage 

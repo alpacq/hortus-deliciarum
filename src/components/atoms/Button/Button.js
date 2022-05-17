@@ -16,5 +16,6 @@ export const Button = styled(Link)`
   border-radius: 10px;
   align-self: ${({ isRight, isCentered }) => (isRight ? "flex-end" : isCentered ? "center" : "flex-start")};
   cursor: pointer;
-  margin-top: ${({ isCentered }) => (isCentered ? "0" : "0.67em")};
+  margin-top: ${({ isCentered }) => (isCentered ? "1.33em" : "0.67em")};
+  margin-bottom: ${({ isCentered }) => (isCentered ? "1.33em" : "0")};
 `

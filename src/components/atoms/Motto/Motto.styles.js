@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Wrapper = styled.div`
-  position: absolute;
+  position: ${({ isAbsolute }) => (isAbsolute ? "absolute" : "static")};
   bottom: 5vh;
   width: 100%;
   display: flex;
@@ -11,8 +11,8 @@ export const Wrapper = styled.div`
 
 export const StyledSubheader = styled.h2`
   font-family: 'Cormorant Garamond';
-  font-size: ${({ theme }) => theme.fontSize.l};
+  font-size: ${({ theme, isLarge }) => (isLarge ? theme.fontSize.l : theme.fontSize.ml)};
   font-style: italic;
-  font-weight: 400;
-  color: ${({ theme }) => theme.colors.bgTextSand};
+  font-weight: ${({ isBold }) => (isBold ? "700" : "400")};
+  color: ${({ theme, isGreen }) => (isGreen ? theme.colors.bgTextSand : theme.colors.textGreen)};
 `

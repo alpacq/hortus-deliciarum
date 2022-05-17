@@ -8,7 +8,6 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  max-height: 80vh;
 `
 
 export const CarouselWrapper = styled.div`
@@ -36,8 +35,8 @@ export const ItemWrapper = styled.div`
 export const LeftOverlayWrapper = styled.div`
   height: 100%;
   position: absolute;
-  left: -5vw;
-  width: 11vw;
+  left: -14vw;
+  width: 20vw;
   z-index: 99 !important;
   background-color: ${({ theme, isGreen }) => (isGreen ? theme.colors.textGreen : theme.colors.bgTextSand)};
   background-image: ${({ isGreen }) => (isGreen ? `url(${greenBackground})` : `url(${sandBackground})`)};
@@ -47,8 +46,8 @@ export const LeftOverlayWrapper = styled.div`
 export const RightOverlayWrapper = styled.div`
   height: 100%;
   position: absolute;
-  right: 0;
-  width: 6vw;
+  right: -8vw;
+  width: 14vw;
   z-index: 99 !important;
   background-color: ${({ theme, isGreen }) => (isGreen ? theme.colors.textGreen : theme.colors.bgTextSand)};
   background-image: ${({ isGreen }) => (isGreen ? `url(${greenBackground})` : `url(${sandBackground})`)};

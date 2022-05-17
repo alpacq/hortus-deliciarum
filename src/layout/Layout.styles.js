@@ -25,6 +25,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  align-items: center;
   background-color: ${({ theme, isGreen }) => (isGreen ? theme.colors.textGreen : theme.colors.bgTextSand)};
   background-image: ${({ isGreen }) => (isGreen ? `url(${greenBackground})` : `url(${sandBackground})`)};
   background-repeat: repeat;

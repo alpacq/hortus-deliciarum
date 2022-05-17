@@ -1,9 +1,9 @@
 import React from "react"
 import { ColumnWrapper } from "./LongColumn.styles"
 
-const LongColumn = ({ children, isSmall }) => {
+const LongColumn = ({ children}) => {
   return (
-    <ColumnWrapper isSmall={isSmall}>
+    <ColumnWrapper>
       {children}
     </ColumnWrapper>
   )

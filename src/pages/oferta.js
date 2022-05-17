@@ -35,9 +35,9 @@ const OfferPage = () => {
   const offerTitle = 'W naszych progach...'
   const offerText = 'W naszej warszawskiej pracowni czekają na Was kwiaty cięte, rośliny doniczkowe oraz rękodzieło. Dla miłośników tego ostatniego mamy sojowe świece, ceramikę, biżuterię, portugalskie mydła czy kompozycje z drewna. Na zamówienie chętnie wykonamy lasy w szkle, suszone bukiety i flowerboxy.\n\nPoznajcie naszą ofertę!'
   const cieteTitle = 'Kwiaty cięte'
-  const cieteText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+  const cieteText = 'Choć z radością przygotujemy dla Was klasyczny bukiet 100 róż, przyznamy, że sami gustujemy w tych nieco bardziej ekstrawaganckich, szalonych, niecodziennych. A oprócz wykorzystania świeżych i pachnących kwiatów, tworzymy także bukiety suszone – długowieczne, które będą zdobić Wasze przestrzenie znacznie dłużej!\n\nOferujemy także dowóz kwiatów w cenie bukietu na terenie Starych Bielan.'
   const doniczkoweTitle = 'Rośliny doniczkowe'
-  const doniczkoweText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+  const doniczkoweText = 'Nasze zielone królestwo po brzegi wypełniają rośliny doniczkowe zarówno dla początkujących jak i bardziej zaawansowanych miłośników. Dbamy o dostępność tych popularnych, ale również niecodziennych okazów, a do każdego z nich pomożemy dobrać odpowiednią osłonkę z całej naszej kolekcji. Nie zostawimy Was też bez wskazówek odnośnie opieki!'
   const dodatkiTitle = 'Jeszcze więcej piękna'
   const dodatkiText = 'Oprócz baśniowych bukietów i zachwycających roślin doniczkowych znajdziecie u nas naturalne świece sojowe, obłędnie pachnące mydła portugalskie i ręcznie wykonaną ceramikę – zarówno donice, osłonki, jak i biżuterię czy dodatki do Waszych wnętrz. Na zamówienie wykonamy las w szkle. Możemy też obiecać, że pomożemy wybrać doskonały prezent na każdą okazję.'
   const aranzacjaTitle = 'Aranżacja przestrzeni'
@@ -62,7 +62,6 @@ const OfferPage = () => {
           hasButton
           buttonText="zamów bukiet"
           linkUrl="/formularz"
-          isButtonRight
           imageUrl={flowers9x9} 
           imageAlt="bukiety artystyczne z kwiatów ciętych" />
       </Section>

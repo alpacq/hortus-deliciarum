@@ -5,10 +5,10 @@ export const Wrapper = styled.div`
   direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 30px;
+  gap: clamp(0.566rem, 0.0043rem + 1.5603vw, 3rem);
 `
 
 export const StyledLogo = styled.img`
-  width: 56px;
-  height: 56px;
+  width: clamp(1.0556rem, 0.0069rem + 2.9131vw, 5.6rem);
+  height: clamp(1.0556rem, 0.0069rem + 2.9131vw, 5.6rem);
 `

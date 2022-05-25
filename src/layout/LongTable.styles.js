@@ -5,7 +5,7 @@ export const LongColumnsWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   gap: 1vw;
   margin: 3vh 0;

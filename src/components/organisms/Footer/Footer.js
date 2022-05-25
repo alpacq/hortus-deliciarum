@@ -9,7 +9,7 @@ const Footer = ({ isGreen }) => {
 
   return (
     <Wrapper isGreen={isGreen}>
-      <StyledLink isGreen={isGreen} to="/#mainpage">{footerText.linkText}</StyledLink>
+      <StyledLink isGreen={isGreen} to={footerText.linkText === "strona główna" ? "/#mainpage" : "/#firstScroll"}>{footerText.linkText}</StyledLink>
       <SmallSocialsBar isGreen={isGreen} />
     </Wrapper>
   )

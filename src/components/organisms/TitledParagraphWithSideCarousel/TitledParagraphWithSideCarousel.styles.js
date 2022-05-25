@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import greenBackground from '../../../images/Rectangle.svg'
-import sandBackground from '../../../images/Rectangle (2).svg'
+import sandBackground from '../../../images/RectangleSand.svg'
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -19,6 +19,7 @@ export const TextWrapper = styled.div`
   padding-left: 2vw;
   background-color: ${({ theme, isGreen }) => (isGreen ? theme.colors.textGreen : theme.colors.bgTextSand)};
   background-image: ${({ isGreen }) => (isGreen ? `url(${greenBackground})` : `url(${sandBackground})`)};
+  background-blend-mode: ${({ isGreen }) => (isGreen ? 'normal' : 'soft-light')};
   background-repeat: repeat;
   z-index: 99 !important;
 `

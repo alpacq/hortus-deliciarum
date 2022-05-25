@@ -37,12 +37,8 @@ const MeetUsPage = () => {
         <Paragraph>{firstPar}</Paragraph>
         <Motto isBold text={mottoText} />
         <LongTable>
-          <LongColumn>
-            <ColImg imageUrl={pn1} imageAlt="" />
-          </LongColumn>
-          <LongColumn>
-            <ColImg imageUrl={pn2} imageAlt="" />
-          </LongColumn>
+          <ColImg imageUrl={pn1} imageAlt="" />
+          <ColImg imageUrl={pn2} imageAlt="" />
         </LongTable>
         <Paragraph dangerouslySetInnerHTML={richSecondPar} />
         <Paragraph>{thirdPar}</Paragraph>
@@ -50,12 +46,8 @@ const MeetUsPage = () => {
         <Paragraph><StyledLink href="https://www.instagram.com/hortusdeliciarum/" target="_blank" rel="noopener noreferrer">Na naszym Instagramie</StyledLink>{fourthPar}</Paragraph>
         <Paragraph>{fifthPar}</Paragraph>
         <LongTable>
-          <LongColumn>
-            <ColImg imageUrl={pn4} imageAlt="" />
-          </LongColumn>
-          <LongColumn>
-            <ColImg imageUrl={pn5} imageAlt="" />
-          </LongColumn>
+          <ColImg imageUrl={pn4} imageAlt="" />
+          <ColImg imageUrl={pn5} imageAlt="" />
         </LongTable>
         <Paragraph><strong>{sixthPar}</strong></Paragraph>
       </Section>

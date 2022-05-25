@@ -4,7 +4,8 @@ import { Link } from "gatsby"
 export const Wrapper = styled.nav`
   width: 100%;
   height: 9vh;
-  background: ${({ theme, isGreen }) => (isGreen ? theme.colors.darkGreen : theme.colors.darkSand)};
+  background-color: ${({ theme, isGreen }) => (isGreen ? theme.colors.darkGreen : theme.colors.darkSand)};
+  background-blend-mode: ${({ isGreen }) => (isGreen ? 'normal' : 'overlay')};
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -27,8 +28,8 @@ export const NavigationWrapper = styled.div`
 export const DropdownWrapper = styled.div`
   display: none;
   position: absolute;
-  background: ${({ isGreen }) => (isGreen ? "rgba(80, 95, 93, 0.5)" : "rgba(223, 220, 217, 0.5)")};
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background: ${({ theme, isGreen }) => (isGreen ? theme.colors.dropdownGreenBg : theme.colors.dropdownSandBg)};
+  box-shadow: 0px 4px 4px ${({ theme, isGreen }) => (isGreen ? theme.colors.footerGreen : theme.colors.sentBtnShadow)};
   border-radius: 4px;
   z-index: 10;
   min-width: 285px;
@@ -46,7 +47,7 @@ export const SubNavigationItem = styled(Link)`
   padding: 0.5rem 1rem;
 
   &:hover {
-    background: ${({ isGreen }) => (isGreen ? "rgba(80, 95, 93, 0.5)" : "rgba(219, 215, 212, 0.5)")};
+    background: ${({ theme, isGreen }) => (isGreen ? "rgba(33, 54, 52, 0.29)" : theme.colors.dropdownSandHoverBg)};
   }
 `
 

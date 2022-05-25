@@ -2,14 +2,13 @@ import React, { useState, useRef } from "react"
 import { Title } from "../../atoms/Title/Title"
 import { SendButton, StyledColumn, StyledForm, StyledInfo, StyledOrnament, StyledTextArea, Wrapper, StyledInput } from "./ContactForm.styles"
 import ornament from "../../../images/ozdkon.svg"
+import ornamentGr from "../../../images/ozdkongr.svg"
 import axios from "axios"
 
-const ContactForm = ({ title }) => {
+const ContactForm = ({ isGreen, title }) => {
   const mailInput = useRef(null)
-  const themeInput = useRef(null)
   const textInput = useRef(null)
   const [isMailError, setIsMailError] = useState(false)
-  const [isThemeError, setIsThemeError] = useState(false)
   const [isTextError, setIsTextError] = useState(false)
   const [isSent, setIsSent] = useState(false)
   const [isClicked, setIsClicked] = useState(false)
@@ -31,19 +30,14 @@ const ContactForm = ({ title }) => {
   const handleOnSubmit = e => {
     e.preventDefault()    
     const form = e.target
-    console.log(mailInput.current.value)
     if(mailInput.current.value === null || mailInput.current.value === "") {
       setIsMailError(true)
-    }
-    if(themeInput.current.value === null || themeInput.current.value === "") {
-      setIsThemeError(true)
     }
     if(textInput.current.value === null || textInput.current.value === "") {
       setIsTextError(true)
     }
-    if(!(mailInput.current.value === null || mailInput.current.value === "") && !(themeInput.current.value === null || themeInput.current.value === "") && !(textInput.current.value === null || textInput.current.value === "")) {
+    if(!(mailInput.current.value === null || mailInput.current.value === "") && !(textInput.current.value === null || textInput.current.value === "")) {
       setIsClicked(true)
-      console.log(form)
       setServerState({ submitting: true })
       axios({
         method: "post",
@@ -65,12 +59,6 @@ const ContactForm = ({ title }) => {
     }
   }
 
-  const handleThemeChange = e => {
-    if(!(themeInput.current.value === null || themeInput.current.value === "")) {
-      setIsThemeError(false)
-    }
-  }
-
   const handleTextChange = e => {
     if(!(textInput.current.value === null || textInput.current.value === "")) {
       setIsTextError(false)
@@ -79,23 +67,22 @@ const ContactForm = ({ title }) => {
 
   return (
     <Wrapper>
-      <Title isLong>{title}</Title>
+      <Title isLong isGreen={isGreen}>{title}</Title>
       <StyledForm onSubmit={handleOnSubmit}>
         <StyledColumn>
-          <StyledInput type="email" name="email" placeholder="*adres e-mail" ref={mailInput} onChange={handleMailChange} isError={isMailError} />
+          <StyledInput isGreen={isGreen} type="email" name="email" placeholder="*adres e-mail" ref={mailInput} onChange={handleMailChange} isError={isMailError} />
           {isMailError ? <StyledInfo isError>uzupełnij to pole</StyledInfo> : null}
-          <StyledInput type="text" name="phone" placeholder="telefon" />
-          <StyledInput type="text" name="theme" placeholder="*temat" ref={themeInput} onChange={handleThemeChange} isError={isThemeError} />
-          {isThemeError ? <StyledInfo isError>uzupełnij to pole</StyledInfo> : null}
-          <StyledInfo>*pola wymagane</StyledInfo>
+          <StyledInput isGreen={isGreen} type="text" name="phone" placeholder="telefon" />
+          <StyledInput isGreen={isGreen} type="text" name="theme" placeholder="temat" />
+          <StyledInfo isGreen={isGreen}>*pola wymagane</StyledInfo>
         </StyledColumn>
         <StyledColumn>
-           <StyledTextArea name="message" placeholder="*o co chcesz nas zapytać?" ref={textInput} onChange={handleTextChange} isError={isTextError} />
+           <StyledTextArea isGreen={isGreen} name="message" placeholder="*o co chcesz nas zapytać?" ref={textInput} onChange={handleTextChange} isError={isTextError} />
            {isTextError ? <StyledInfo isError>uzupełnij to pole</StyledInfo> : null}
            <SendButton type="submit" isClicked={isClicked} isSent={isSent}>{isSent ? "wysłane" : "wyślij"}</SendButton>
         </StyledColumn>
       </StyledForm>
-      <StyledOrnament src={ornament} alt="" />
+      <StyledOrnament src={isGreen ? ornamentGr : ornament} alt="" />
     </Wrapper>
   )
 }

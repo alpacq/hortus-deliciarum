@@ -15,6 +15,7 @@ export const Wrapper = styled.div`
   z-index: 2;
   padding-left: 40px;
   padding-right: 10px;
+  box-shadow: 4px 0px 10px ${({ theme, isGreen }) => (isGreen ? theme.colors.textGreen : theme.colors.footerShadow)};
 `
 
 export const StyledLink = styled(Link)`

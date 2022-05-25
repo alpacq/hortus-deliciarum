@@ -45,23 +45,15 @@ const WeddingsPage = () => {
         <Paragraph>{thirdPar}</Paragraph>
         <Button isBig isCentered to="/formularz">skontaktuj się z nami</Button>
         <LongTable>
-          <LongColumn>
-            <ColImg imageUrl={wedA} imageAlt="" />
-          </LongColumn>
-          <LongColumn>
-            <ColImg imageUrl={wedB} imageAlt="" />
-          </LongColumn>
+          <ColImg imageUrl={wedA} imageAlt="" />
+          <ColImg imageUrl={wedB} imageAlt="" />
         </LongTable>
         <Paragraph>{additionalText}</Paragraph>
         <Paragraph><strong>{strongText}</strong></Paragraph>
         <ColImg imageUrl={wedC} imageAlt="" />
         <LongTable>
-          <LongColumn>
-            <ColImg imageUrl={wedD} imageAlt="" />
-          </LongColumn>
-          <LongColumn>
-            <ColImg imageUrl={wedE} imageAlt="" />
-          </LongColumn>
+          <ColImg imageUrl={wedD} imageAlt="" />
+          <ColImg imageUrl={wedE} imageAlt="" />
         </LongTable>
       </Section>
       <Section>

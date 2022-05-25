@@ -1,8 +1,12 @@
 import styled, { createGlobalStyle } from "styled-components"
 import greenBackground from '../images/Rectangle.svg'
-import sandBackground from '../images/Rectangle (2).svg'
+import sandBackground from '../images/RectangleSand.svg'
 
 export const GlobalStyle = createGlobalStyle`
+  html {
+    font-size: 62.5%;
+  }
+
   body {
     padding: 0;
     margin: 0;
@@ -28,6 +32,7 @@ export const Wrapper = styled.div`
   align-items: center;
   background-color: ${({ theme, isGreen }) => (isGreen ? theme.colors.textGreen : theme.colors.bgTextSand)};
   background-image: ${({ isGreen }) => (isGreen ? `url(${greenBackground})` : `url(${sandBackground})`)};
+  background-blend-mode: ${({ isGreen }) => (isGreen ? 'normal' : 'soft-light')};
   background-repeat: repeat;
   color: ${({ theme, isGreen }) => (isGreen ? theme.colors.bgTextSand : theme.colors.textGreen)};
 `
@@ -41,7 +46,8 @@ export const ScrollWrapper = styled.div`
   scrollbar-width: none;
   position: relative;
   background-color: ${({ theme, isGreen }) => (isGreen ? theme.colors.textGreen : theme.colors.bgTextSand)};
-  background-image: ${({ isGreen }) => (isGreen ? `url(${greenBackground})` : 'none')};
-  background-repeat: ${({ isGreen }) => (isGreen ? 'repeat' : 'no-repeat')};
+  background-image: ${({ isGreen }) => (isGreen ? `url(${greenBackground})` : `url(${sandBackground})`)};
+  background-blend-mode: ${({ isGreen }) => (isGreen ? 'normal' : 'soft-light')};
+  background-repeat: repeat;
   color: ${({ theme, isGreen }) => (isGreen ? theme.colors.bgTextSand : theme.colors.textGreen)};
 `

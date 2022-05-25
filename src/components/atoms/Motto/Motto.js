@@ -8,13 +8,12 @@ const Motto = ({ isAbsolute, isGreen, isLarge, isBold, text }) => {
   const { ref, inView } = useInView({ threshold: 0.9})
 
   useEffect(() => {
-    console.log(inView)
-    if(inView) {
+    if(inView && text === "Miejsce tworzone rodzinną pasją umiłowania piękna.") {
       footerText.setFooterLinkText("przewiń dalej")
     } else {
       footerText.setFooterLinkText("strona główna")
     }
-  }, [inView, footerText])
+  }, [inView, footerText, text])
 
   return (
     <Wrapper ref={ref} isAbsolute={isAbsolute}>

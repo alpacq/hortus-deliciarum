@@ -1,18 +1,11 @@
 import React from "react"
-import { StyledImage } from "../PageImg/PageImg.styles"
-import { AbsoluteImg, Wrapper } from "./ColImg.styles"
+import { Wrapper, StyledImg } from "./ColImg.styles"
 
-const ColImg = ({ imageUrl, imageAlt, isSmall, isAbsolute, absHeight=0 }) => {
+const ColImg = ({ imageUrl, imageAlt }) => {
   return (
-    <>
-      {isAbsolute ? 
-      <Wrapper isSmall={isSmall} isAbsolute absHeight={absHeight}>
-        <AbsoluteImg src={imageUrl} alt={imageAlt} />
-      </Wrapper> :
-      <Wrapper isSmall={isSmall} >
-        <StyledImage src={imageUrl} alt={imageAlt} />
-      </Wrapper>}
-    </>
+    <Wrapper >
+      <StyledImg src={imageUrl} alt={imageAlt} />
+    </Wrapper>
   )
 }
 

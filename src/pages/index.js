@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../layout/Layout"
+import ContactForm from "../components/organisms/ContactForm/ContactForm"
 import LandingImage from "../components/atoms/LandingImage/LandingImage"
 import LogoTitle from "../components/atoms/LogoTitle/LogoTitle"
 import Section from "../layout/Section"
@@ -20,8 +21,9 @@ const IndexPage = () => {
   const meetUsTitle = 'Poznaj nas'
   const meetUsText = 'Szukasz kwiaciarni w Warszawie? Sami określilibyśmy się raczej jako mała, rodzinna pracownia florystyczna. Hortus Deliciarum to miejsce z duszą, powstałe z potrzeby tworzenia i dzielenia się pięknem.'
   const contactTitle = 'Czekamy na ciebie'
-  const contactInfo = "adres\nul. Jana Kasprowicza 68, lok. 3c\n01-949 Warszawa\n\ngodziny otwarcia\nponiedziałek – piątek: 10.00 - 19.00\nsobota: 10.00 - 16.00\n\n\nkontakt\ntel. +48 519 059 013\ne-mail: kontakt@hortusdeliciarum.pl"
+  const contactInfo = "adres\nul. Jana Kasprowicza 68, lok. 3c\n01-949 Warszawa\n\ngodziny otwarcia\nponiedziałek – piątek: 10.00 - 19.00\nsobota: 10.00 - 16.00\n\nkontakt\ntel. +48 519 059 013\ne-mail: kontakt@hortusdeliciarum.pl"
   const mottoText = "Miejsce tworzone rodzinną pasją umiłowania piękna."
+  const formTitle = "Napisz do nas"
 
   return (
     <Layout isScrollSnap title="Hortus Deliciarum" isGreen>
@@ -31,7 +33,7 @@ const IndexPage = () => {
       <Section id="mainpage">        
         <Motto isAbsolute isLarge isGreen text={mottoText} />
       </Section>
-      <Section>
+      <Section id="firstScroll">
         <TitledParagraphWithImage 
           title={offerTitle}
           text={offerText}
@@ -76,6 +78,9 @@ const IndexPage = () => {
           isGreen
           imageUrl={finalFlower}
           imageAlt="" />
+      </Section>
+      <Section>
+        <ContactForm isGreen title={formTitle} />
       </Section>
     </Layout>      
   )

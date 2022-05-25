@@ -34,16 +34,29 @@ export const StyledInput = styled.input`
   margin-bottom: ${({ isError }) => (isError ? "0" : "2vh")};
   padding: 0 1em;
   border-radius: 10px;
-  background: ${({ theme }) => theme.colors.inpuBg};
+  background: ${({ theme, isGreen }) => (isGreen ? theme.colors.clickedBtn : theme.colors.inputBg)};
   font-weight: 500;
   font-family: "Montserrat" sans-serif;
   font-style: normal;
   font-size: ${({ theme }) => theme.fontSize.m};
-  color: ${({ theme }) => theme.colors.inputText};
+  color: ${({ theme, isGreen }) => (isGreen ? theme.colors.bgTextSand : theme.colors.inputText)};
   justify-content: center;
   outline: none;
   border: none;
   box-shadow: ${({ theme, isError }) => (isError ? `0px 4px 10px ${theme.colors.red}` : "none")};
+
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: ${({ theme }) => theme.colors.phText};
+    opacity: 1; /* Firefox */
+  }
+
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: ${({ theme }) => theme.colors.phText};
+  }
+
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: ${({ theme }) => theme.colors.phText};
+  }
 `
 
 export const StyledTextArea = styled.textarea`
@@ -53,22 +66,35 @@ export const StyledTextArea = styled.textarea`
   margin-bottom: ${({ isError }) => (isError ? "0" : "2vh")};
   border-radius: 10px;
   font-family: inherit;
-  background: ${({ theme }) => theme.colors.inputBg};
+  background: ${({ theme, isGreen }) => (isGreen ? theme.colors.clickedBtn : theme.colors.inputBg)};
   font-weight: 500;
   font-style: normal;
   font-size: ${({ theme }) => theme.fontSize.m};
-  color: ${({ theme }) => theme.colors.inputText};
+  color: ${({ theme, isGreen }) => (isGreen ? theme.colors.bgTextSand : theme.colors.inputText)};
   justify-content: center;
   outline: none;
   border: none;
   box-shadow: ${({ theme, isError }) => (isError ? `0px 4px 10px ${theme.colors.red}` : "none")};
+
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: ${({ theme }) => theme.colors.phText};
+    opacity: 1; /* Firefox */
+  }
+
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: ${({ theme }) => theme.colors.phText};
+  }
+
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: ${({ theme }) => theme.colors.phText};
+  }
 `
 
 export const StyledInfo = styled.p`
   font-weight: 400;
   font-style: normal;
   font-size: ${({ theme }) => theme.fontSize.xxs};
-  color: ${({ theme, isError }) => (isError ? theme.colors.red : theme.colors.textGreen)};
+  color: ${({ theme, isError, isGreen }) => (isError ? theme.colors.red : isGreen ? theme.colors.bgTextSand : theme.colors.textGreen)};
   opacity: ${({ isError }) => (isError ? "1" : "0.4")};
   margin: 0.5vh;
 `

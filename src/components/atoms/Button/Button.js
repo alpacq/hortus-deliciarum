@@ -7,7 +7,8 @@ export const Button = styled(Link)`
   justify-content: center;
   margin-left: ${({ isBig, isCentered }) => ((isBig && !isCentered) ? "8vw" : "0")};
   text-decoration: none;
-  width: ${({ isBig }) => (isBig ? "21vw" : "14vw")};
+  text-transform: uppercase;
+  width: 85vw;
   height: 7vh;
   font-size: ${({ theme }) => theme.fontSize.m};
   color: ${({ theme }) => theme.colors.bgTextSand};
@@ -27,5 +28,10 @@ export const Button = styled(Link)`
     background: ${({ theme, isGreen }) => (isGreen ? theme.colors.bgTextSand : theme.colors.sentBtn)};
     color: ${({ theme }) => theme.colors.textGreen};
     box-shadow: 0px 4px 4px ${({ theme, isGreen }) => (isGreen ? theme.colors.textGreen : theme.colors.sentBtnShadow)};
+  }
+
+  ${({ theme }) => theme.media.desktop} {
+    text-transform: none;
+    width: ${({ isBig }) => (isBig ? "21vw" : "14vw")};
   }
 `

@@ -14,11 +14,15 @@ export const SectionWrapper = styled.div`
 `
 
 export const LongSectionWrapper = styled.div`
-  width: 73%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
   background: none;
+  
+  ${({ theme }) => theme.media.desktop} {
+    width: 73%;
+  }
 `

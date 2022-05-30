@@ -13,6 +13,7 @@ export const theme = {
     sentBtn: '#c4c4c4',
     sentBtnShadow: '#cecece',
     white: '#ffffff',
+    black: '#000000',
     red: '#ff6161',
     footerShadow: '#c6c5c5',
     nbBg: '#706f6f',
@@ -22,10 +23,10 @@ export const theme = {
     dropdownGreenBg: '#394b49',
   },
   fontSize: {
-    xl: 'clamp(1.8rem, 5vw, 9.6rem)',
+    xl: 'clamp(4rem, 5vw, 9.6rem)',
     l: 'clamp(.9rem, 2.5vw, 4.8rem)',
     ml: 'clamp(0.6rem, 1.6667vw, 3.2rem)',
-    m: 'clamp(0.566rem, 0.0043rem + 1.5603vw, 3rem)',
+    m: 'clamp(1.2rem, 0.0043rem + 1.5603vw, 3rem)',
     s: 'clamp(0.45rem, 1.25vw, 2.4rem)',
     xs: 'clamp(0.339rem, 0.0018rem + 0.9365vw, 1.8rem)',
     xxs: 'clamp(0.283rem, 0.0022rem + 0.7801vw, 1.5rem)'

@@ -8,13 +8,14 @@ export const Wrapper = styled.div`
   display: flex;
   position: relative;
   flex-direction: column;
-  justify-content:  ${({ isFinal, isReversed }) => ((isFinal && (!isReversed)) ? "flex-start" : "center")};
+  justify-content: space-between;
   align-items: center;
   gap: 0;
 
   ${({ theme }) => theme.media.desktop} {
     flex-direction: row;
     gap: ${({ isFinal, isReversed }) => ((isFinal && (!isReversed)) ? "0" : "4vw")};
+    justify-content:  ${({ isFinal, isReversed }) => ((isFinal && (!isReversed)) ? "flex-start" : "center")};
     width: 88%;
   }
 `

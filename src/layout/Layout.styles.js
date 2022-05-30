@@ -41,8 +41,8 @@ export const ScrollWrapper = styled.div`
   height: 100vh;
   width: 100%;
   overflow-y: ${({ screensHeight }) => (screensHeight === 1 ? "hidden" : "scroll")};
-  scroll-snap-type: y mandatory;
-  scroll-padding-top: 9vh;
+  scroll-snap-type: none;
+  scroll-padding-top: 0;
   scrollbar-width: none;
   position: relative;
   background-color: ${({ theme, isGreen }) => (isGreen ? theme.colors.textGreen : theme.colors.bgTextSand)};
@@ -50,4 +50,9 @@ export const ScrollWrapper = styled.div`
   background-blend-mode: ${({ isGreen }) => (isGreen ? 'normal' : 'soft-light')};
   background-repeat: repeat;
   color: ${({ theme, isGreen }) => (isGreen ? theme.colors.bgTextSand : theme.colors.textGreen)};
+
+  ${({ theme }) => theme.media.desktop} {
+    scroll-snap-type: y mandatory;
+    scroll-padding-top: 9vh;
+  }
 `

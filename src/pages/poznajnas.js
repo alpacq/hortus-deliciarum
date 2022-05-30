@@ -1,7 +1,6 @@
 import React from "react"
 import Layout from "../layout/Layout"
 import Section from "../layout/Section"
-import LongColumn from "../layout/LongColumn"
 import LongTable from "../layout/LongTable"
 import CenteredTitle from "../components/molecules/CenteredTitle/CenteredTitle"
 import { Paragraph } from "../components/atoms/Paragraph/Paragraph"
@@ -35,7 +34,7 @@ const MeetUsPage = () => {
         <CenteredTitle title={title} />
         <OrnamentImg imageUrl={ornament} imageAlt="" />
         <Paragraph>{firstPar}</Paragraph>
-        <Motto isBold text={mottoText} />
+        <Motto isBold isMobile text={mottoText} />
         <LongTable>
           <ColImg imageUrl={pn1} imageAlt="" />
           <ColImg imageUrl={pn2} imageAlt="" />

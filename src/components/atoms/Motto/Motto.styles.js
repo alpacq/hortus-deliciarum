@@ -4,9 +4,13 @@ export const Wrapper = styled.div`
   position: ${({ isAbsolute }) => (isAbsolute ? "absolute" : "static")};
   bottom: 5vh;
   width: 100%;
-  display: flex;
+  display: ${({ isMobile }) => (isMobile ? "flex" : "none")};
   align-items: center;
   justify-content: center;
+
+  ${({ theme }) => theme.media.desktop} {
+    display: flex;
+  }
 `
 
 export const StyledSubheader = styled.h2`

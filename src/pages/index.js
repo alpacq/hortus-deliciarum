@@ -8,6 +8,7 @@ import Motto from "../components/atoms/Motto/Motto"
 import TitledParagraphWithImage from "../components/organisms/TitledParagraphWithImage/TitledParagraphWithImage"
 import circle from "../images/kółko.png"
 import flower from "../images/kwiatek.png"
+import mobileFlower from "../images/mobileflower.png"
 import offerBuquet from "../images/20211214_122512 1.png"
 import weddingComposition from "../images/Dominika&Bartłomiej_298 2.png"
 import ourFlowerShop from "../images/IMG_9633 1.png"
@@ -20,7 +21,7 @@ const IndexPage = () => {
   const weddingText = 'Nasze doświadczenie rękodzielnicze, artystycznei florystyczne sprawia, że każda ślubna aranżacja dopięta jest na ostatni guzik. Będziemy zaszczyceni mogąc zatroszczyć się o Wasze sale weselne, ślubne bukiety, wianki czy podarunki dla rodziców.'
   const meetUsTitle = 'Poznaj nas'
   const meetUsText = 'Szukasz kwiaciarni w Warszawie? Sami określilibyśmy się raczej jako mała, rodzinna pracownia florystyczna. Hortus Deliciarum to miejsce z duszą, powstałe z potrzeby tworzenia i dzielenia się pięknem.'
-  const contactTitle = 'Czekamy na ciebie'
+  const contactTitle = 'Czekamy\nna ciebie'
   const contactInfo = "adres\nul. Jana Kasprowicza 68, lok. 3c\n01-949 Warszawa\n\ngodziny otwarcia\nponiedziałek – piątek: 10.00 - 19.00\nsobota: 10.00 - 16.00\n\nkontakt\ntel. +48 519 059 013\ne-mail: kontakt@hortusdeliciarum.pl"
   const mottoText = "Miejsce tworzone rodzinną pasją umiłowania piękna."
   const formTitle = "Napisz do nas"
@@ -29,57 +30,67 @@ const IndexPage = () => {
     <Layout isScrollSnap title="Hortus Deliciarum" isGreen>
       <LandingImage imageUrl={circle} />
       <LandingImage imageUrl={flower} isTop />
+      <LandingImage imageUrl={mobileFlower} isMobile />
       <LogoTitle />
-      <Section id="mainpage">        
+      <Section id="mainpage" isMobile>        
         <Motto isAbsolute isLarge isGreen text={mottoText} />
       </Section>
-      <Section id="firstScroll">
+      <Section id="firstScroll" isMobile>
         <TitledParagraphWithImage 
           title={offerTitle}
           text={offerText}
           isGreen
           hasButton
+          hasMobileButton
           buttonText="czytaj więcej"
+          mobileButtonText="zobacz więcej"
           linkUrl="/oferta"
           isButtonRight
           imageUrl={offerBuquet} 
           imageAlt="duży bukiet artystyczny" />          
       </Section>  
-      <Section>
+      <Section isMobile>
         <TitledParagraphWithImage
           isReversed
           title={weddingTitle}
           text={weddingText}
           isGreen
           hasButton
+          hasMobileButton
           buttonText="czytaj więcej"
+          mobileButtonText="zobacz więcej"
           linkUrl="/florystykaslubna"
           imageUrl={weddingComposition}
           imageAlt="weselna kompozycja kwiatowa" />
       </Section>
-      <Section>
+      <Section isMobile>
         <TitledParagraphWithImage
           title={meetUsTitle}
           text={meetUsText}
           isGreen
           hasButton
+          hasMobileButton
           buttonText="czytaj więcej"
+          mobileButtonText="zobacz więcej"
           linkUrl="/poznajnas"
           isButtonRight
           imageUrl={ourFlowerShop}
           imageAlt="kwiaciarnia Hortus Deliciarum" />
       </Section>
-      <Section isFinal>
+      <Section isMobile>
         <TitledParagraphWithImage
           isReversed
           isFinal
+          hasMobileButton
+          linkUrl="/formularz"
+          mobileButtonText="skontaktuj się"
           title={contactTitle}
           text={contactInfo.replace("adres", "<strong>adres</strong>").replace("godziny otwarcia", "<strong>godziny otwarcia</strong>").replace("kontakt", "<strong>kontakt</strong>")}
           isGreen
           imageUrl={finalFlower}
           imageAlt="" />
       </Section>
-      <Section>
+      <Section isFinal>
         <ContactForm isGreen title={formTitle} />
       </Section>
     </Layout>      

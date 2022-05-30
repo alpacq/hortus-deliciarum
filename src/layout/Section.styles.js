@@ -1,9 +1,8 @@
 import styled from "styled-components"
 
 export const SectionWrapper = styled.div`
-  height: ${({ isFinal }) => (isFinal ? "91vh" : "calc(91vh - 40px) !important")};
   width: 100%;
-  display: flex;
+  display: ${({ isMobile }) => (isMobile ? "flex" : "none")};
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -11,6 +10,11 @@ export const SectionWrapper = styled.div`
   background: none;
   overflow: hidden;
   scroll-snap-align: start;
+
+  ${({ theme }) => theme.media.desktop} {
+    height: 91vh; //${({ isFinal }) => (isFinal ? "91vh" : "calc(91vh - 40px) !important")};
+    display: flex;
+  }
 `
 
 export const LongSectionWrapper = styled.div`

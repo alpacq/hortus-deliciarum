@@ -3,7 +3,7 @@ import { StyledSubheader, Wrapper } from "./Motto.styles"
 import { useFooterText } from "../../../providers/FooterLinkTextProvider"
 import { useInView } from "react-intersection-observer"
 
-const Motto = ({ isAbsolute, isGreen, isLarge, isBold, text }) => {
+const Motto = ({ isAbsolute, isGreen, isLarge, isBold, text, isMobile }) => {
   const footerText = useFooterText()
   const { ref, inView } = useInView({ threshold: 0.9})
 
@@ -16,7 +16,7 @@ const Motto = ({ isAbsolute, isGreen, isLarge, isBold, text }) => {
   }, [inView, footerText, text])
 
   return (
-    <Wrapper ref={ref} isAbsolute={isAbsolute}>
+    <Wrapper ref={ref} isAbsolute={isAbsolute} isMobile={isMobile}>
       <StyledSubheader isGreen={isGreen} isLarge={isLarge} isBold={isBold}>
         {text}
       </StyledSubheader>

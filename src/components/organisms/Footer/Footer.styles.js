@@ -2,10 +2,10 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 export const Wrapper = styled.div`
+  display: none;
   width: 100%;
-  height: 40px;
+  height: clamp(2.4rem, 2.0308rem + 1.0256vw, 4rem);
   background: ${({ theme, isGreen }) => (isGreen ? theme.colors.footerGreen : theme.colors.darkSand)};
-  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -13,9 +13,13 @@ export const Wrapper = styled.div`
   bottom: 0;
   margin: 0;
   z-index: 2;
-  padding-left: 40px;
+  padding-left: clamp(2.4rem, 2.0308rem + 1.0256vw, 4rem);
   padding-right: 10px;
   box-shadow: 4px 0px 10px ${({ theme, isGreen }) => (isGreen ? theme.colors.textGreen : theme.colors.footerShadow)};
+  
+  ${({ theme }) => theme.media.desktop} {
+    display: flex;
+  }
 `
 
 export const StyledLink = styled(Link)`

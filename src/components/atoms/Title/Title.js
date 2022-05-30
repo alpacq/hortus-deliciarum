@@ -8,5 +8,14 @@ export const Title = styled.h1`
   color: ${({ theme, isGreen }) => isGreen ? theme.colors.bgTextSand : theme.colors.textGreen};
   white-space: pre-line;
   width: ${({ isLong }) => (isLong ? "88%" : "auto")};
-  margin-bottom: 0.33em;
+  margin-bottom: 0;
+  text-align: center;
+  width: 100%;
+  margin-top: 0.16em;
+
+  ${({ theme }) => theme.media.desktop} {
+    margin-top: 0.67em;
+    margin-bottom: ${({ isFinal }) => (isFinal ? "0" : "0.33em")};
+    text-align: left;
+  }
 `

@@ -6,7 +6,7 @@ export const Wrapper = styled.nav`
   height: 9vh;
   background-color: ${({ theme, isGreen }) => (isGreen ? theme.colors.darkGreen : theme.colors.darkSand)};
   background-blend-mode: ${({ isGreen }) => (isGreen ? 'normal' : 'overlay')};
-  display: flex;
+  display: none;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -15,6 +15,10 @@ export const Wrapper = styled.nav`
   margin: 0;
   padding: 0 12%;
   z-index: 100 !important;
+
+  ${({ theme }) => theme.media.desktop} {
+    display: flex;
+  }
 `
 
 export const NavigationWrapper = styled.div`

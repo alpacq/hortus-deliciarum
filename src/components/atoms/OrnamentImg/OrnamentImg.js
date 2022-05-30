@@ -1,9 +1,9 @@
 import React from "react"
 import { Wrapper, StyledImg } from "./OrnamentImg.styles"
 
-const OrnamentImg = ({ imageUrl, imageAlt }) => {
+const OrnamentImg = ({ imageUrl, imageAlt, isMobile }) => {
   return (
-    <Wrapper>
+    <Wrapper isMobile={isMobile}>
       <StyledImg src={imageUrl} alt={imageAlt} />
     </Wrapper>
   )

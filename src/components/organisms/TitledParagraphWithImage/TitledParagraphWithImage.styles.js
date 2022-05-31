@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   margin-left: ${({ isFinal, isReversed }) => ((isFinal && !isReversed) ? "6%" : "0")};
   margin-right: ${({ isFinal, isReversed }) => ((isFinal && !isReversed) ? "6%" : "0")};
   height: 100%;
-  display: flex;
+  display: ${({ isMobile }) => (isMobile ? "flex" : "none")};
   position: relative;
   flex-direction: column;
   justify-content: space-between;
@@ -13,6 +13,7 @@ export const Wrapper = styled.div`
   gap: 0;
 
   ${({ theme }) => theme.media.desktop} {
+    display: flex;
     flex-direction: row;
     gap: ${({ isFinal, isReversed }) => ((isFinal && (!isReversed)) ? "0" : "4vw")};
     justify-content:  ${({ isFinal, isReversed }) => ((isFinal && (!isReversed)) ? "flex-start" : "center")};

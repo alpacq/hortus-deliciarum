@@ -18,13 +18,14 @@ export const SectionWrapper = styled.div`
 `
 
 export const LongSectionWrapper = styled.div`
-  width: 100%;
+  width: 85%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
   background: none;
+  overflow-x: hidden;
   
   ${({ theme }) => theme.media.desktop} {
     width: 73%;

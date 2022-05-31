@@ -1,9 +1,9 @@
 import React from "react"
 import { LongColumnsWrapper } from "./LongTable.styles"
 
-const LongTable = ({ children }) => {
+const LongTable = ({ children, isMobile }) => {
   return (
-    <LongColumnsWrapper>
+    <LongColumnsWrapper isMobile={isMobile}>
       {children}
     </LongColumnsWrapper>
   )

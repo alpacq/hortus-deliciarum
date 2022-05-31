@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
   z-index: 99;
 
   ${({ theme }) => theme.media.desktop} {
+    display: ${({ isMobile }) => (isMobile ? "none" : "initial")};
     top: 50vh;
     transform: translate(-50%, -50%);
   }

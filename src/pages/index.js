@@ -6,6 +6,7 @@ import LogoTitle from "../components/atoms/LogoTitle/LogoTitle"
 import Section from "../layout/Section"
 import Motto from "../components/atoms/Motto/Motto"
 import TitledParagraphWithImage from "../components/organisms/TitledParagraphWithImage/TitledParagraphWithImage"
+import logo from "../images/Group 10.svg"
 import circle from "../images/kółko.png"
 import flower from "../images/kwiatek.png"
 import mobileFlower from "../images/mobileflower.png"
@@ -13,6 +14,8 @@ import offerBuquet from "../images/20211214_122512 1.png"
 import weddingComposition from "../images/Dominika&Bartłomiej_298 2.png"
 import ourFlowerShop from "../images/IMG_9633 1.png"
 import finalFlower from "../images/blue 1.svg"
+import arrowUp from "../images/mobileArrowUpGreen.svg"
+import MobileNavItem from "../components/molecules/MobileNavItem/MobileNavItem"
 
 const IndexPage = () => {
   const offerTitle = 'Oferta'
@@ -28,15 +31,16 @@ const IndexPage = () => {
 
   return (
     <Layout isScrollSnap title="Hortus Deliciarum" isGreen>
-      <LandingImage imageUrl={circle} />
+      <LandingImage id="top" imageUrl={circle} />
       <LandingImage imageUrl={flower} isTop />
       <LandingImage imageUrl={mobileFlower} isMobile />
-      <LogoTitle />
+      <LogoTitle logoUrl={logo}/>
       <Section id="mainpage" isMobile>        
         <Motto isAbsolute isLarge isGreen text={mottoText} />
       </Section>
       <Section id="firstScroll" isMobile>
         <TitledParagraphWithImage 
+          isMobile
           title={offerTitle}
           text={offerText}
           isGreen
@@ -51,6 +55,7 @@ const IndexPage = () => {
       </Section>  
       <Section isMobile>
         <TitledParagraphWithImage
+          isMobile
           isReversed
           title={weddingTitle}
           text={weddingText}
@@ -65,6 +70,7 @@ const IndexPage = () => {
       </Section>
       <Section isMobile>
         <TitledParagraphWithImage
+          isMobile
           title={meetUsTitle}
           text={meetUsText}
           isGreen
@@ -79,6 +85,7 @@ const IndexPage = () => {
       </Section>
       <Section isMobile>
         <TitledParagraphWithImage
+          isMobile
           isReversed
           isFinal
           hasMobileButton
@@ -90,6 +97,7 @@ const IndexPage = () => {
           imageUrl={finalFlower}
           imageAlt="" />
       </Section>
+      <MobileNavItem isGreen imageUrl={arrowUp} isScrollTop text="wróć do góry" />
       <Section isFinal>
         <ContactForm isGreen title={formTitle} />
       </Section>

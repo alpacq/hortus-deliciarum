@@ -1,9 +1,9 @@
 import React from "react"
 import { Wrapper, StyledImg } from "./ColImg.styles"
 
-const ColImg = ({ imageUrl, imageAlt }) => {
+const ColImg = ({ hasMargin, isMobile, isDesktop, imageUrl, imageAlt }) => {
   return (
-    <Wrapper >
+    <Wrapper hasMargin={hasMargin} isMobile={isMobile} isDesktop={isDesktop}>
       <StyledImg src={imageUrl} alt={imageAlt} />
     </Wrapper>
   )

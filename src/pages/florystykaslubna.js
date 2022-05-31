@@ -3,7 +3,7 @@ import Layout from "../layout/Layout"
 import Section from "../layout/Section"
 import { Button } from "../components/atoms/Button/Button"
 import LongTable from "../layout/LongTable"
-import LongColumn from "../layout/LongColumn"
+import logo from "../images/Group 9.svg"
 import wedA from "../images/wedA.png"
 import wedB from "../images/wedB.png"
 import wedC from "../images/wedC.png"
@@ -20,11 +20,16 @@ import wed6 from "../images/wedding (6).png"
 import wed7 from "../images/wedding (7).png"
 import wed8 from "../images/wedding (8).png"
 import wedLast from "../images/wedLast.png"
+import mobileOrnamentSandBig from "../images/mobileOrnamentSandBig.svg"
 import OrnamentImg from "../components/atoms/OrnamentImg/OrnamentImg"
 import ColImg from "../components/atoms/ColImg/ColImg"
 import { Paragraph } from "../components/atoms/Paragraph/Paragraph"
 import CarouselWithButton from "../components/organisms/CarouselWithButton/CarouselWithButton"
 import CenteredTitle from "../components/molecules/CenteredTitle/CenteredTitle"
+import LogoTitle from "../components/atoms/LogoTitle/LogoTitle"
+import Carousel from "../components/molecules/Carousel/Carousel"
+import MobileNavItem from "../components/molecules/MobileNavItem/MobileNavItem"
+import arrowUp from "../images/mobileArrowUpSand.svg"
 
 const WeddingsPage = () => {
   const title = "Ślub jak z bajki"
@@ -37,20 +42,24 @@ const WeddingsPage = () => {
 
   return (
     <Layout title="Florystyka ślubna" >
+      <LogoTitle id="top" logoUrl={logo} isMobile />
       <Section isLong>
         <CenteredTitle title={title} />
-        <OrnamentImg imageUrl={ornament} imageAlt="" />
+        <CenteredTitle isMobile title={title} />
+        <OrnamentImg isDesktop imageUrl={ornament} imageAlt="" />
         <Paragraph>{firstPar}</Paragraph>
         <Paragraph><strong>{secondPar}</strong></Paragraph>
         <Paragraph>{thirdPar}</Paragraph>
         <Button isBig isCentered to="/formularz">skontaktuj się z nami</Button>
+        <Button isMobile noMargin to="/formularz">skontaktuj się</Button>
+        <ColImg isMobile imageUrl={wedB} imageAlt="" />
         <LongTable>
           <ColImg imageUrl={wedA} imageAlt="" />
           <ColImg imageUrl={wedB} imageAlt="" />
         </LongTable>
         <Paragraph>{additionalText}</Paragraph>
-        <Paragraph><strong>{strongText}</strong></Paragraph>
-        <ColImg imageUrl={wedC} imageAlt="" />
+        <Paragraph><strong>{strongText}</strong></Paragraph>        
+        <ColImg hasMargin isDesktop imageUrl={wedC} imageAlt="" />
         <LongTable>
           <ColImg imageUrl={wedD} imageAlt="" />
           <ColImg imageUrl={wedE} imageAlt="" />
@@ -59,7 +68,10 @@ const WeddingsPage = () => {
       <Section>
         <CarouselWithButton imageUrls={wedImages} moveBy={100} numSlides={10} visibleSlides={1} buttonText="umów się na spotkanie" linkUrl="/formularz" />
       </Section>
+      <Carousel isMobile imageUrls={wedImages} moveBy={85} numSlides={10} visibleSlides={1} />
       <Button isBig isCentered to="/formularz">umów się na spotkanie</Button>
+      <OrnamentImg isMobile hasMargin imageUrl={mobileOrnamentSandBig} imageAlt="" />
+      <MobileNavItem imageUrl={arrowUp} isScrollTop text="wróć do góry" />
     </Layout>
   )
 }

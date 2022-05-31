@@ -2,10 +2,10 @@ import React from "react"
 import { Title } from "../../atoms/Title/Title"
 import { Wrapper } from "./CenteredTitle.styles"
 
-const CenteredTitle = ({ title, isGreen, isLong }) => {
+const CenteredTitle = ({ title, isGreen, isLong, isMobile }) => {
   return (
-    <Wrapper>
-      <Title isGreen={isGreen} isLong={isLong}>{title}</Title>
+    <Wrapper isMobile={isMobile}>
+      <Title isCentered isGreen={isGreen} isLong={isLong}>{title}</Title>
     </Wrapper>
   )
 }

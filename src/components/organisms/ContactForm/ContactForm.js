@@ -1,8 +1,10 @@
 import React, { useState, useRef } from "react"
 import { Title } from "../../atoms/Title/Title"
 import { SendButton, StyledColumn, StyledForm, StyledInfo, StyledOrnament, StyledTextArea, Wrapper, StyledInput } from "./ContactForm.styles"
+import OrnamentImg from "../../atoms/OrnamentImg/OrnamentImg"
 import ornament from "../../../images/ozdkon.svg"
 import ornamentGr from "../../../images/ozdkongr.svg"
+import mobileOrnament from "../../../images/mobileOrnamentSand.svg"
 import axios from "axios"
 
 const ContactForm = ({ isGreen, title }) => {
@@ -79,10 +81,12 @@ const ContactForm = ({ isGreen, title }) => {
         <StyledColumn>
            <StyledTextArea isGreen={isGreen} name="message" placeholder="*o co chcesz nas zapytać?" ref={textInput} onChange={handleTextChange} isError={isTextError} />
            {isTextError ? <StyledInfo isError>uzupełnij to pole</StyledInfo> : null}
+           <StyledInfo isMobile isGreen={isGreen}>*pola wymagane</StyledInfo>
            <SendButton type="submit" isClicked={isClicked} isSent={isSent}>{isSent ? "wysłane" : "wyślij"}</SendButton>
         </StyledColumn>
       </StyledForm>
       <StyledOrnament src={isGreen ? ornamentGr : ornament} alt="" />
+      <OrnamentImg imageUrl={mobileOrnament} imageAlt="" isMobile />
     </Wrapper>
   )
 }

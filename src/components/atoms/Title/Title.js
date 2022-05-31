@@ -16,6 +16,6 @@ export const Title = styled.h1`
   ${({ theme }) => theme.media.desktop} {
     margin-top: 0.67em;
     margin-bottom: ${({ isFinal }) => (isFinal ? "0" : "0.33em")};
-    text-align: left;
+    text-align: ${({ isCentered }) => (isCentered ? "center" : "left")};
   }
 `

@@ -19,4 +19,5 @@ export const StyledSubheader = styled.h2`
   font-style: italic;
   font-weight: ${({ isBold }) => (isBold ? "700" : "400")};
   color: ${({ theme, isGreen }) => (isGreen ? theme.colors.bgTextSand : theme.colors.textGreen)};
+  text-align: center;
 `

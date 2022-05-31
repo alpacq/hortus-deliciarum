@@ -1,11 +1,10 @@
 import React from "react"
 import { Logo, Wrapper } from "./LogoTitle.styles"
-import logo from "../../../images/Group 10.svg"
 
-const LogoTitle = () => {
+const LogoTitle = ({ isMobile, logoUrl, id }) => {
   return (
-    <Wrapper>
-      <Logo src={logo} alt="" />
+    <Wrapper id={id} isMobile={isMobile}>
+      <Logo src={logoUrl} alt="" />
     </Wrapper>
   )
 }

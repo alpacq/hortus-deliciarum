@@ -4,12 +4,13 @@ import PageImg from "../../atoms/PageImg/PageImg"
 import { Wrapper } from "./TitledParagraphWithImage.styles"
 import OrnamentImg from "../../atoms/OrnamentImg/OrnamentImg"
 import mobileOrnament from "../../../images/mobileOrnament.svg"
+import mobileOrnamentSand from "../../../images/mobileOrnamentSandBig.svg"
 
-const TitledParagraphWithImage = ({ isReversed, isFinal, title, text, isGreen, hasButton, hasMobileButton, isButtonBig, buttonText="", mobileButtonText="", linkUrl="/", isButtonRight, imageUrl, imageAlt }) => {
+const TitledParagraphWithImage = ({ isMobile, isReversed, isFinal, title, text, isGreen, hasButton, hasMobileButton, isMobileButtonUp, isButtonBig, buttonText="", mobileButtonText="", linkUrl="/", isButtonRight, imageUrl, imageAlt }) => {
   return (
     <>
       {isReversed ? 
-      <Wrapper isFinal={isFinal} isReversed={isReversed} >
+      <Wrapper isFinal={isFinal} isReversed={isReversed} isMobile={isMobile}>
         <PageImg imageUrl={imageUrl} imageAlt={imageAlt} isFinal={isFinal} />
         <TitledParagraph
           isFinal={isFinal}
@@ -18,6 +19,7 @@ const TitledParagraphWithImage = ({ isReversed, isFinal, title, text, isGreen, h
           isGreen={isGreen}
           hasButton={hasButton}
           hasMobileButton={hasMobileButton}
+          isMobileButtonUp={isMobileButtonUp}
           isButtonBig={isButtonBig}
           buttonText={buttonText}
           mobileButtonText={mobileButtonText}
@@ -25,9 +27,9 @@ const TitledParagraphWithImage = ({ isReversed, isFinal, title, text, isGreen, h
           isButtonRight={isButtonRight} 
           imageUrl={imageUrl}
           imageAlt={imageAlt} />
-          {isFinal ? null : <OrnamentImg imageUrl={mobileOrnament} imageAlt="" isMobile />}
+          {isFinal ? null : <OrnamentImg hasMargin={(!hasMobileButton || isMobileButtonUp)} imageUrl={isGreen ? mobileOrnament : mobileOrnamentSand} imageAlt="" isMobile />}
       </Wrapper> :
-      <Wrapper isFinal={isFinal}>
+      <Wrapper isFinal={isFinal} isMobile={isMobile}>
         <TitledParagraph
           isFinal={isFinal}
           title={title}
@@ -35,6 +37,7 @@ const TitledParagraphWithImage = ({ isReversed, isFinal, title, text, isGreen, h
           isGreen={isGreen}
           hasButton={hasButton}
           hasMobileButton={hasMobileButton}
+          isMobileButtonUp={isMobileButtonUp}
           isButtonBig={isButtonBig}
           buttonText={buttonText}
           mobileButtonText={mobileButtonText}
@@ -43,7 +46,7 @@ const TitledParagraphWithImage = ({ isReversed, isFinal, title, text, isGreen, h
           imageUrl={imageUrl}
           imageAlt={imageAlt} />
         <PageImg imageUrl={imageUrl} imageAlt={imageAlt} isFinal={isFinal} />
-        {isFinal ? null : <OrnamentImg imageUrl={mobileOrnament} imageAlt="" isMobile />}
+        {isFinal ? null : <OrnamentImg hasMargin={(!hasMobileButton || isMobileButtonUp)} imageUrl={isGreen ? mobileOrnament : mobileOrnamentSand} imageAlt="" isMobile />}
       </Wrapper>}    
     </>
   )

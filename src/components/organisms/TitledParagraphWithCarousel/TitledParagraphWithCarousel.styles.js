@@ -3,10 +3,14 @@ import styled from "styled-components"
 export const Wrapper = styled.div`
   width: 100%;
   height: 100%;
-  display: flex;
+  display: ${({ isMobile }) => (isMobile ? "flex" : "none")};
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  ${({ theme }) => theme.media.desktop} {
+    display: ${({ isMobile }) => (isMobile ? "none" : "flex")};
+  }
 `
 export const TextWrapper = styled.div`
   width: 88%;

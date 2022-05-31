@@ -1,10 +1,13 @@
 import React from "react"
 import Layout from "../layout/Layout"
 import Section from "../layout/Section"
+import LogoTitle from "../components/atoms/LogoTitle/LogoTitle"
 import LongTable from "../layout/LongTable"
 import CenteredTitle from "../components/molecules/CenteredTitle/CenteredTitle"
 import { Paragraph } from "../components/atoms/Paragraph/Paragraph"
+import logo from "../images/Group 9.svg"
 import ornament from "../images/titleOrnament.svg"
+import mobileOrnamentSandBig from "../images/mobileOrnamentSandBig.svg"
 import pn1 from "../images/pn1.png"
 import pn2 from "../images/pn2.png"
 import pn3 from "../images/pn3.png"
@@ -14,9 +17,12 @@ import ColImg from "../components/atoms/ColImg/ColImg"
 import OrnamentImg from "../components/atoms/OrnamentImg/OrnamentImg"
 import Motto from "../components/atoms/Motto/Motto"
 import { StyledLink } from "../components/atoms/StyledLink/StyledLink"
+import MobileNavItem from "../components/molecules/MobileNavItem/MobileNavItem"
+import arrowUp from "../images/mobileArrowUpSand.svg"
 
 const MeetUsPage = () => {
   const title = "O zamiłowaniu do \nsztuki i rękodzieła"
+  const mobileTitle = "O sztuce i rękodziele"
   const firstPar = "Choć na pierwszy rzut oka możemy jawić się jako kwiaciarnia, dla nas to określenie raczej nie oddaje klimatu miejsca jakim jest Hortus Deliciarum. Sami określilibyśmy się jako mała, rodzinna pracownia florystyczna – miejsce rodem z Alicji w Krainie Czarów. W naszych progach możecie poczuć klimat rzemiosła i rękodzieła, a w naszych pracach serce, które wkładamy w każdą roślinną (i nie tylko) kompozycję."
   const mottoText = "Ostatecznie nasza pracownia to miejsce powstałe z potrzeby tworzenia i dzielenia się pięknem."
   const secondPar = "Na co dzień nasza kwiaciarnia stacjonuje w Warszawie, na Starych Bielanach, przy Kasprowicza 68. To tutaj tworzymy dla Was małe arcydzieła. Najczęściej spotkacie tu nasze dwie florystki: Olę i Zuzię – mamę i córkę. To od nich zaczęła się nasza kwietna pasja."
@@ -30,12 +36,14 @@ const MeetUsPage = () => {
 
   return (
     <Layout title="Poznaj nas">
+      <LogoTitle id="top" isMobile logoUrl={logo} />
       <Section isLong>
         <CenteredTitle title={title} />
-        <OrnamentImg imageUrl={ornament} imageAlt="" />
+        <CenteredTitle isMobile title={mobileTitle} />
+        <OrnamentImg isDesktop imageUrl={ornament} imageAlt="" />
         <Paragraph>{firstPar}</Paragraph>
         <Motto isBold isMobile text={mottoText} />
-        <LongTable>
+        <LongTable isMobile>
           <ColImg imageUrl={pn1} imageAlt="" />
           <ColImg imageUrl={pn2} imageAlt="" />
         </LongTable>
@@ -44,11 +52,13 @@ const MeetUsPage = () => {
         <ColImg imageUrl={pn3} imageAlt="" />
         <Paragraph><StyledLink href="https://www.instagram.com/hortusdeliciarum/" target="_blank" rel="noopener noreferrer">Na naszym Instagramie</StyledLink>{fourthPar}</Paragraph>
         <Paragraph>{fifthPar}</Paragraph>
-        <LongTable>
+        <LongTable isMobile>
           <ColImg imageUrl={pn4} imageAlt="" />
           <ColImg imageUrl={pn5} imageAlt="" />
         </LongTable>
         <Paragraph><strong>{sixthPar}</strong></Paragraph>
+        <OrnamentImg isMobile imageUrl={mobileOrnamentSandBig} imageAlt="" />
+        <MobileNavItem imageUrl={arrowUp} isScrollTop text="wróć do góry" />
       </Section>
     </Layout>
   )

@@ -18,7 +18,7 @@ export const Button = styled(Link)`
   border-radius: 2px;
   align-self: ${({ isRight, isCentered }) => (isRight ? "flex-end" : isCentered ? "center" : "flex-start")};
   cursor: pointer;
-  margin-top: ${({ isCentered }) => (isCentered ? "1.33em" : "0.67em")};
+  margin-top: ${({ isCentered, noMargin }) => (isCentered ? "1.33em" : noMargin ? "0" : "0.67em")};
   margin-bottom: 1.33em;
 
   &:hover {

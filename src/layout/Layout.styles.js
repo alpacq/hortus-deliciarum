@@ -28,6 +28,7 @@ export const Wrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
   position: relative;
   align-items: center;
   background-color: ${({ theme, isGreen }) => (isGreen ? theme.colors.textGreen : theme.colors.bgTextSand)};
@@ -40,7 +41,8 @@ export const Wrapper = styled.div`
 export const ScrollWrapper = styled.div`
   height: 100vh;
   width: 100%;
-  overflow-y: ${({ screensHeight }) => (screensHeight === 1 ? "hidden" : "scroll")};
+  overflow-y: scroll;
+  overflow-x: hidden;
   scroll-snap-type: none;
   scroll-padding-top: 0;
   scrollbar-width: none;
@@ -54,5 +56,6 @@ export const ScrollWrapper = styled.div`
   ${({ theme }) => theme.media.desktop} {
     scroll-snap-type: y mandatory;
     scroll-padding-top: 9vh;
+    overflow-y: ${({ screensHeight }) => (screensHeight === 1 ? "hidden" : "scroll")};
   }
 `

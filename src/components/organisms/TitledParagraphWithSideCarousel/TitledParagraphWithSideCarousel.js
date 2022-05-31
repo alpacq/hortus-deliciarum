@@ -3,11 +3,11 @@ import TitledParagraph from "../../molecules/TitledParagraph/TitledParagraph"
 import Carousel from "../../molecules/Carousel/Carousel"
 import { Wrapper, SliderWrapper, TextWrapper } from "./TitledParagraphWithSideCarousel.styles"
 
-const TitledParagraphWithSideCarousel = ({ isReversed, title, text, isGreen, hasButton, buttonText="", linkUrl="/", isButtonRight, imageUrls }) => {
+const TitledParagraphWithSideCarousel = ({ isMobile, isReversed, title, text, isGreen, hasButton, buttonText="", linkUrl="/", isButtonRight, imageUrls }) => {
   return (
     <>
       {isReversed ? 
-      <Wrapper isReversed={isReversed}>
+      <Wrapper isReversed={isReversed} isMobile={isMobile}>
         <SliderWrapper>
           <Carousel imageUrls={imageUrls} moveBy={40} numSlides={7} visibleSlides={1} />
         </SliderWrapper>
@@ -22,7 +22,7 @@ const TitledParagraphWithSideCarousel = ({ isReversed, title, text, isGreen, has
             isButtonRight={isButtonRight} />
         </TextWrapper>        
       </Wrapper> :
-      <Wrapper>
+      <Wrapper isMobile={isMobile}>
         <TextWrapper isGreen={isGreen}>
           <TitledParagraph
             title={title}

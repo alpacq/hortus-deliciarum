@@ -3,10 +3,10 @@ import Carousel from "../../molecules/Carousel/Carousel"
 import TitledParagraph from "../../molecules/TitledParagraph/TitledParagraph"
 import { SliderWrapper, TextWrapper, Wrapper } from "./TitledParagraphWithCarousel.styles"
 
-const TitledParagraphWithCarousel = ({ title, text, isGreen, imageUrls }) => {
+const TitledParagraphWithCarousel = ({ isMobile, title, text, isGreen, imageUrls }) => {
 
   return (
-    <Wrapper>
+    <Wrapper isMobile={isMobile}>
       <TextWrapper>
         <TitledParagraph
           isCarousel

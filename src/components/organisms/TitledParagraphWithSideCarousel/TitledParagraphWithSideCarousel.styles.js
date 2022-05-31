@@ -5,11 +5,15 @@ import sandBackground from '../../../images/RectangleSand.svg'
 export const Wrapper = styled.div`
   width: 100%;
   height: 100%;
-  display: flex;
+  display: ${({ isMobile }) => (isMobile ? "flex" : "none")};
   position: relative;
   flex-direction: row;
   justify-content:  center;
   align-items: center;
+
+  ${({ theme }) => theme.media.desktop} {
+    display: ${({ isMobile }) => (isMobile ? "none" : "flex")};
+  }
 `
 
 export const TextWrapper = styled.div`

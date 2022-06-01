@@ -19,6 +19,7 @@ import Motto from "../components/atoms/Motto/Motto"
 import { StyledLink } from "../components/atoms/StyledLink/StyledLink"
 import MobileNavItem from "../components/molecules/MobileNavItem/MobileNavItem"
 import arrowUp from "../images/mobileArrowUpSand.svg"
+import MobileNavMenu from "../components/organisms/MobileNavMenu/MobileNavMenu"
 
 const MeetUsPage = () => {
   const title = "O zamiłowaniu do \nsztuki i rękodzieła"
@@ -38,6 +39,7 @@ const MeetUsPage = () => {
     <Layout title="Poznaj nas">
       <LogoTitle id="top" isMobile logoUrl={logo} />
       <Section isLong>
+        <MobileNavMenu isExpandable />
         <CenteredTitle title={title} />
         <CenteredTitle isMobile title={mobileTitle} />
         <OrnamentImg isDesktop imageUrl={ornament} imageAlt="" />

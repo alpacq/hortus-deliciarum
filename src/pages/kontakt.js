@@ -6,6 +6,7 @@ import TitledParagraphWithImage from "../components/organisms/TitledParagraphWit
 import logo from "../images/Group 9.svg"
 import finalFlower from "../images/blue 1.svg"
 import LogoTitle from "../components/atoms/LogoTitle/LogoTitle"
+import MobileNavMenu from "../components/organisms/MobileNavMenu/MobileNavMenu"
 
 const ContactPage = () => {
   const contactTitle = "Czekamy na ciebie"
@@ -16,6 +17,7 @@ const ContactPage = () => {
     <Layout isScrollSnap title="Kontakt">
       <LogoTitle isMobile logoUrl={logo} />
       <Section isFinal isMobile>
+        <MobileNavMenu isExpandable />
         <TitledParagraphWithImage
           isMobile
           isFinal

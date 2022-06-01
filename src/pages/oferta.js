@@ -48,6 +48,7 @@ import ColImg from "../components/atoms/ColImg/ColImg"
 import OrnamentImg from "../components/atoms/OrnamentImg/OrnamentImg"
 import Carousel from "../components/molecules/Carousel/Carousel"
 import MobileNavItem from "../components/molecules/MobileNavItem/MobileNavItem"
+import MobileNavMenu from "../components/organisms/MobileNavMenu/MobileNavMenu"
 
 const OfferPage = () => {
   const addsImages = [adds1, adds2, adds3, adds4, adds5, adds6, adds7, adds8, adds9, adds10, adds11, adds12, adds13]
@@ -71,6 +72,7 @@ const OfferPage = () => {
     <Layout title="Oferta" isScrollSnap>
       <LogoTitle id="top" logoUrl={logo} isMobile />
       <Section isMobile>
+        <MobileNavMenu isExpandable />
         <TitledParagraphWithImage 
           isMobile
           title={offerTitle}

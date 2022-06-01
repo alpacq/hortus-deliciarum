@@ -16,6 +16,7 @@ import ourFlowerShop from "../images/IMG_9633 1.png"
 import finalFlower from "../images/blue 1.svg"
 import arrowUp from "../images/mobileArrowUpGreen.svg"
 import MobileNavItem from "../components/molecules/MobileNavItem/MobileNavItem"
+import MobileNavMenu from "../components/organisms/MobileNavMenu/MobileNavMenu"
 
 const IndexPage = () => {
   const offerTitle = 'Oferta'
@@ -31,11 +32,12 @@ const IndexPage = () => {
 
   return (
     <Layout isScrollSnap title="Hortus Deliciarum" isGreen>
-      <LandingImage id="top" imageUrl={circle} />
+      <LandingImage imageUrl={circle} />
       <LandingImage imageUrl={flower} isTop />
       <LandingImage imageUrl={mobileFlower} isMobile />
-      <LogoTitle logoUrl={logo}/>
-      <Section id="mainpage" isMobile>        
+      <LogoTitle id="top" logoUrl={logo}/>
+      <Section id="mainpage" isMobile>
+        <MobileNavMenu isGreen />
         <Motto isAbsolute isLarge isGreen text={mottoText} />
       </Section>
       <Section id="firstScroll" isMobile>
@@ -96,8 +98,8 @@ const IndexPage = () => {
           isGreen
           imageUrl={finalFlower}
           imageAlt="" />
+        <MobileNavItem isGreen imageUrl={arrowUp} isScrollTop text="wróć do góry" />
       </Section>
-      <MobileNavItem isGreen imageUrl={arrowUp} isScrollTop text="wróć do góry" />
       <Section isFinal>
         <ContactForm isGreen title={formTitle} />
       </Section>

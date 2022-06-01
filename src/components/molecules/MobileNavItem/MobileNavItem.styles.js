@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 5vh 0;
-  align-self: center;
+  align-self: center !important;
 
   ${({ theme }) => theme.media.desktop} {
     display: none;

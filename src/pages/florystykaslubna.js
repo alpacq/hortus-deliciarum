@@ -30,6 +30,7 @@ import LogoTitle from "../components/atoms/LogoTitle/LogoTitle"
 import Carousel from "../components/molecules/Carousel/Carousel"
 import MobileNavItem from "../components/molecules/MobileNavItem/MobileNavItem"
 import arrowUp from "../images/mobileArrowUpSand.svg"
+import MobileNavMenu from "../components/organisms/MobileNavMenu/MobileNavMenu"
 
 const WeddingsPage = () => {
   const title = "Ślub jak z bajki"
@@ -44,6 +45,7 @@ const WeddingsPage = () => {
     <Layout title="Florystyka ślubna" >
       <LogoTitle id="top" logoUrl={logo} isMobile />
       <Section isLong>
+        <MobileNavMenu isExpandable />
         <CenteredTitle title={title} />
         <CenteredTitle isMobile title={title} />
         <OrnamentImg isDesktop imageUrl={ornament} imageAlt="" />

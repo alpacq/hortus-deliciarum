@@ -86,7 +86,7 @@ const ContactForm = ({ isGreen, title }) => {
         </StyledColumn>
       </StyledForm>
       <StyledOrnament src={isGreen ? ornamentGr : ornament} alt="" />
-      <OrnamentImg imageUrl={mobileOrnament} imageAlt="" isMobile />
+      <OrnamentImg imageUrl={mobileOrnament} hasMargin imageAlt="" isMobile />
     </Wrapper>
   )
 }

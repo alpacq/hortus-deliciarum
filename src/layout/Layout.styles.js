@@ -47,6 +47,8 @@ export const ScrollWrapper = styled.div`
   scroll-padding-top: 0;
   scrollbar-width: none;
   position: relative;
+  justify-content: center;
+  align-items: center;
   background-color: ${({ theme, isGreen }) => (isGreen ? theme.colors.textGreen : theme.colors.bgTextSand)};
   background-image: ${({ isGreen }) => (isGreen ? `url(${greenBackground})` : `url(${sandBackground})`)};
   background-blend-mode: ${({ isGreen }) => (isGreen ? 'normal' : 'soft-light')};

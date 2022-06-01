@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 
   ${({ theme }) => theme.media.desktop} {
     display: none;
@@ -36,7 +37,7 @@ export const NavigationWrapper = styled.div`
 export const DropdownWrapper = styled.div`
   position: absolute;
   width: 85vw;
-  top: ${({ theme }) => `calc(${theme.fontSize.m} + 32vh)`};
+  top: ${({ theme }) => `calc(3 * ${theme.fontSize.m} + 8vh)`};
   left: 0;
   border-radius: 0px 0px 2px 2px;
   display: ${({ isClicked }) => (isClicked ? "flex" : "none")};

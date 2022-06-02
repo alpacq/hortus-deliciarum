@@ -5,7 +5,7 @@ import Carousel from "../../molecules/Carousel/Carousel"
 const CarouselWithButton = ({ imageUrls, moveBy, isGreen, numSlides, visibleSlides }) => {
   return (
     <Wrapper>
-      <Carousel imageUrls={imageUrls} moveBy={moveBy} isGreen={isGreen} numSlides={numSlides} visibleSlides={visibleSlides} />
+      <Carousel isFullscreen imageUrls={imageUrls} moveBy={moveBy} isGreen={isGreen} numSlides={numSlides} visibleSlides={visibleSlides} />
     </Wrapper>
   )
 }

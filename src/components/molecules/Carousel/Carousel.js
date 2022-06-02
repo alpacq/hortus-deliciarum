@@ -3,7 +3,7 @@ import { Wrapper, ContainerWrapper, ItemWrapper, StyledImg, CarouselWrapper, Lef
 import PrevArrow from "../../atoms/CarouselArrows/PrevArrow";
 import NextArrow from "../../atoms/CarouselArrows/NextArrow";
 
-const Carousel = ({ isMobile, imageUrls, moveBy, isGreen, numSlides, visibleSlides }) => {
+const Carousel = ({ isFullscreen, isMobile, imageUrls, moveBy, isGreen, numSlides, visibleSlides }) => {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [translate, setTranslate] = useState(0)
 
@@ -18,10 +18,10 @@ const Carousel = ({ isMobile, imageUrls, moveBy, isGreen, numSlides, visibleSlid
   }, [currentSlide, moveBy, visibleSlides])
 
   return (
-    <Wrapper isMobile={isMobile}>
-      <CarouselWrapper style={{ transform: `translateX(calc(${translate}vw + 50%))`}}>
+    <Wrapper isFullscreen={isFullscreen} isMobile={isMobile}>
+      <CarouselWrapper moveBy={moveBy} style={{ transform: `translateX(calc(${translate}vw + 50%))`}}>
         {imageUrls.map((imageUrl, index) => (
-          <ContainerWrapper key={index}>
+          <ContainerWrapper moveBy={moveBy} key={index}>
             <ItemWrapper moveBy={moveBy}>
               <StyledImg src={imageUrl} alt="" />
             </ItemWrapper>

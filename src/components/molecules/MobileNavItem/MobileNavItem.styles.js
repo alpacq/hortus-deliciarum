@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
-  width: 42vw;
+  min-width: 42vw;
   align-items: center;
   justify-content: space-between;
   margin: 5vh 0;

@@ -11,9 +11,9 @@ export const Wrapper = styled.div`
   max-height: 85vw;
 
   ${({ theme }) => theme.media.desktop} {
-    width: 100%;
+    width: ${({ isFullscreen }) => (isFullscreen ? "84.5vw" : "100%")};
     display: ${({ isMobile }) => (isMobile ? "none" : "flex")};
-    max-height: auto;
+    max-height: none;
   }
 `
 
@@ -23,7 +23,8 @@ export const CarouselWrapper = styled.div`
   transition: all 1s ease-out;
 
   ${({ theme }) => theme.media.desktop} {
-    height: 88%;
+    max-width: 73vw;
+    max-height: 96vh;
   }
 `
 
@@ -43,7 +44,7 @@ export const ItemWrapper = styled.div`
 
   ${({ theme }) => theme.media.desktop} {
     height: 100%;
-    max-height: auto;
+    max-height: none;
   }
 `
 
@@ -90,7 +91,6 @@ export const StyledImg = styled.img`
   ${({ theme }) => theme.media.desktop} {
     object-fit: initial;
     object-position: initial;
-    max-height: auto;
-    height: 88%;
+    max-height: none;
   }
 `

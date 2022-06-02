@@ -74,13 +74,15 @@ const ContactForm = ({ isGreen, title }) => {
         <StyledColumn>
           <StyledInput isGreen={isGreen} type="email" name="email" placeholder="*adres e-mail" ref={mailInput} onChange={handleMailChange} isError={isMailError} />
           {isMailError ? <StyledInfo isError>uzupełnij to pole</StyledInfo> : null}
+          {isMailError ? <StyledInfo isMobile isError>uzupełnij to pole</StyledInfo> : null}
           <StyledInput isGreen={isGreen} type="text" name="phone" placeholder="telefon" />
-          <StyledInput isGreen={isGreen} type="text" name="theme" placeholder="temat" />
-          <StyledInfo isGreen={isGreen}>*pola wymagane</StyledInfo>
+          <StyledInput isLast isGreen={isGreen} type="text" name="theme" placeholder="temat" />
+          <StyledInfo noMargin isGreen={isGreen}>*pola wymagane</StyledInfo>
         </StyledColumn>
         <StyledColumn>
-           <StyledTextArea isGreen={isGreen} name="message" placeholder="*o co chcesz nas zapytać?" ref={textInput} onChange={handleTextChange} isError={isTextError} />
+           <StyledTextArea isLast isGreen={isGreen} name="message" placeholder="*o co chcesz nas zapytać?" ref={textInput} onChange={handleTextChange} isError={isTextError} />
            {isTextError ? <StyledInfo isError>uzupełnij to pole</StyledInfo> : null}
+           {isTextError ? <StyledInfo isMobile isError>uzupełnij to pole</StyledInfo> : null}
            <StyledInfo isMobile isGreen={isGreen}>*pola wymagane</StyledInfo>
            <SendButton type="submit" isClicked={isClicked} isSent={isSent}>{isSent ? "wysłane" : "wyślij"}</SendButton>
         </StyledColumn>

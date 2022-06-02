@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   margin: 0;
   padding: 0;
   position: relative;  
-  z-index: ${({ isFinal }) => (isFinal ? "99 !important;" : "1")};
+  z-index: ${({ isFinal }) => (isFinal ? "102 !important;" : "1")};
 
   ${({ theme }) => theme.media.desktop} {
     align-items: ${({ isFinal }) => (isFinal ? "flex-end" : "center")};

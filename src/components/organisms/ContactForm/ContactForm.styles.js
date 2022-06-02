@@ -50,7 +50,7 @@ export const StyledInput = styled.input`
   height: 7vh;
   margin-bottom: ${({ isError }) => (isError ? "0" : "2vh")};
   padding: 0 1em;
-  border-radius: 10px;
+  border-radius: 2px;
   background: ${({ theme, isGreen }) => (isGreen ? theme.colors.clickedBtn : theme.colors.inputBg)};
   font-weight: 500;
   font-family: "Montserrat" sans-serif;
@@ -60,7 +60,7 @@ export const StyledInput = styled.input`
   justify-content: center;
   outline: none;
   border: none;
-  box-shadow: ${({ theme, isError }) => (isError ? `0px 4px 10px ${theme.colors.red}` : "none")};
+  box-shadow: ${({ theme, isError }) => (isError ? `0px 4px 10px ${theme.colors.wrongInput}` : "none")};
 
   ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: ${({ theme }) => theme.colors.phText};
@@ -74,14 +74,18 @@ export const StyledInput = styled.input`
   ::-ms-input-placeholder { /* Microsoft Edge */
     color: ${({ theme }) => theme.colors.phText};
   }
+
+  ${({ theme }) => theme.media.desktop} {
+    margin-bottom: ${({ isError, isLast }) => (isError ? "0" : isLast ? "1vh" : "2vh")};
+  }
 `
 
 export const StyledTextArea = styled.textarea`
   width: 100%;
   height: 38vh;
   padding: 1em;
-  margin-bottom: ${({ isError }) => (isError ? "0" : "2vh")};
-  border-radius: 10px;
+  margin-bottom: ${({ isError, isLast }) => (isError ? "0" : isLast ? "1vh" : "2vh")};
+  border-radius: 2px;
   font-family: inherit;
   background: ${({ theme, isGreen }) => (isGreen ? theme.colors.clickedBtn : theme.colors.inputBg)};
   font-weight: 500;
@@ -91,7 +95,7 @@ export const StyledTextArea = styled.textarea`
   justify-content: center;
   outline: none;
   border: none;
-  box-shadow: ${({ theme, isError }) => (isError ? `0px 4px 10px ${theme.colors.red}` : "none")};
+  box-shadow: ${({ theme, isError }) => (isError ? `0px 4px 10px ${theme.colors.wrongInput}` : "none")};
 
   ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: ${({ theme }) => theme.colors.phText};
@@ -104,6 +108,10 @@ export const StyledTextArea = styled.textarea`
 
   ::-ms-input-placeholder { /* Microsoft Edge */
     color: ${({ theme }) => theme.colors.phText};
+  }
+
+  ${({ theme }) => theme.media.desktop} {
+    margin-bottom: ${({ isError }) => (isError ? "0" : "2vh")};
   }
 `
 
@@ -114,11 +122,11 @@ export const StyledInfo = styled.p`
   font-size: ${({ theme }) => theme.fontSize.xxs};
   color: ${({ theme, isError, isGreen }) => (isError ? theme.colors.red : isGreen ? theme.colors.bgTextSand : theme.colors.textGreen)};
   opacity: ${({ isError }) => (isError ? "1" : "0.4")};
-  margin: 0.5vh;
+  margin: ${({ noMargin }) => (noMargin ? "0 0 0 0.5vh" : "0.5vh")};
 
-  ${({ theme }) => theme.media.desktop} [
+  ${({ theme }) => theme.media.desktop} {
     display: ${({ isMobile }) => (isMobile ? "none" : "initial")};
-  ]
+  }
 `
 
 export const SendButton = styled.button`

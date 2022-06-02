@@ -14,6 +14,7 @@ export const theme = {
     sentBtnShadow: '#cecece',
     white: '#ffffff',
     black: '#000000',
+    wrongInput: '#bea2a2',
     red: '#ff6161',
     footerShadow: '#c6c5c5',
     nbBg: '#706f6f',
@@ -26,13 +27,13 @@ export const theme = {
   },
   fontSize: {
     xl: 'clamp(4rem, 5vw, 9.6rem)',
-    l: 'clamp(.9rem, 2.5vw, 4.8rem)',
+    l: 'clamp(2.4rem, 2.5vw, 4.8rem)',
     ml: 'clamp(2.4rem, 1.6667vw, 3.2rem)',
     mobile: 'clamp(1.8rem, 0.4500rem + 3.7500vw, 3.6rem)',
-    m: 'clamp(1.2rem, 0.0043rem + 1.5603vw, 3rem)',
-    s: 'clamp(0.45rem, 1.25vw, 2.4rem)',
-    xs: 'clamp(0.339rem, 0.0018rem + 0.9365vw, 1.8rem)',
-    xxs: 'clamp(0.283rem, 0.0022rem + 0.7801vw, 1.5rem)'
+    m: 'clamp(1.6rem, 0.0043rem + 1.5603vw, 3rem)',
+    s: 'clamp(1.4rem, 1.25vw, 2.4rem)',
+    xs: 'clamp(1.2rem, 0.0018rem + 0.9365vw, 1.8rem)',
+    xxs: 'clamp(1.2rem, 0.0022rem + 0.7801vw, 1.5rem)'
   },
   media: {
     desktop: '@media (min-width: 768px)'

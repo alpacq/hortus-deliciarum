@@ -120,7 +120,7 @@ const OfferPage = () => {
           imageUrl={donica} 
           imageAlt="kwiaty doniczkowe" />          
       </Section>  
-      <Section id="dodatki" isMobile>
+      <Section id="dodatki" isMobile isMultiCarousel>
         <TitledParagraphWithCarousel
           title={dodatkiTitle}
           text={dodatkiText}
@@ -146,7 +146,7 @@ const OfferPage = () => {
           imageUrl={aranz}
           imageAlt="aranżacja przestrzeni" />
       </Section>
-      <Section id="wynajem" isMobile>
+      <Section id="wynajem" isMobile isMultiCarousel>
         <TitledParagraphWithSideCarousel 
           isReversed
           title={wynajemTitle}

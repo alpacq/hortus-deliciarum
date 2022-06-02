@@ -12,7 +12,7 @@ export const SectionWrapper = styled.div`
   scroll-snap-align: start;
 
   ${({ theme }) => theme.media.desktop} {
-    height: 91vh; //${({ isFinal }) => (isFinal ? "91vh" : "calc(91vh - 40px) !important")};
+    height: ${({ isMultiCarousel }) => (isMultiCarousel ? "calc(91vh - 40px)" : "91vh")};
     display: flex;
   }
 `

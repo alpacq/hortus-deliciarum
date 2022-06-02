@@ -1,10 +1,12 @@
 import React from "react"
-import arrow from "../../../images/Polygon 4.svg"
-import { PrevButton } from "./CarouselArrows.styles";
+import arrow from "../../../images/Polygon 5.svg"
+import arrowDesktop from "../../../images/Polygon 5 (2).svg"
+import { PrevButton, MobileImg, DesktopImg } from "./CarouselArrows.styles";
 
-const PrevArrow = ({ className, style, onClick }) => (
+const PrevArrow = ({ className, onClick }) => (
   <PrevButton onClick={onClick} className={className}>
-    <img src={arrow} alt="" />
+    <MobileImg src={arrow} alt="" />
+    <DesktopImg src={arrowDesktop} alt="" />
   </PrevButton>
 );
 

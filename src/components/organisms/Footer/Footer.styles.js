@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   position: sticky;
   bottom: 0;
   margin: 0;
-  z-index: 2;
+  z-index: 100;
   padding-left: clamp(2.4rem, 2.0308rem + 1.0256vw, 4rem);
   padding-right: 10px;
   box-shadow: 4px 0px 10px ${({ theme, isGreen }) => (isGreen ? theme.colors.textGreen : theme.colors.footerShadow)};
@@ -27,7 +27,7 @@ export const StyledLink = styled(Link)`
   font-size: ${({ theme }) => theme.fontSize.xs};
   font-weight: 400;
   cursor: pointer;
-  z-index: 9;
+  z-index: 101;
   color: ${({ theme, isGreen }) => (isGreen ? theme.colors.bgTextSand : theme.colors.textGreen)};
   opacity: ${({ isGreen }) => (isGreen ? "1" : "0.4")};
 `

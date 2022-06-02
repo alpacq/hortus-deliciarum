@@ -14,7 +14,7 @@ export const Button = styled(Link)`
   font-weight: 500;
   color: ${({ theme, isGreen }) => (isGreen ? theme.colors.textGreen : theme.colors.bgTextSand)};
   background: ${({ theme, isGreen }) => (isGreen ? theme.colors.bgTextSand : theme.colors.textGreen)};
-  box-shadow: 0px 4px 10px ${({ theme }) => theme.colors.black};
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
   align-self: ${({ isRight, isCentered }) => (isRight ? "flex-end" : isCentered ? "center" : "flex-start")};
   cursor: pointer;

@@ -67,9 +67,7 @@ const WeddingsPage = () => {
           <ColImg imageUrl={wedE} imageAlt="" />
         </LongTable>
       </Section>
-      <Section>
-        <CarouselWithButton imageUrls={wedImages} moveBy={100} numSlides={10} visibleSlides={1} buttonText="umów się na spotkanie" linkUrl="/formularz" />
-      </Section>
+      <Carousel isFullscreen imageUrls={wedImages} moveBy={100} numSlides={10} visibleSlides={1} />
       <Carousel isMobile imageUrls={wedImages} moveBy={85} numSlides={10} visibleSlides={1} />
       <Button isBig isCentered to="/formularz">umów się na spotkanie</Button>
       <OrnamentImg isMobile hasMargin imageUrl={mobileOrnamentSandBig} imageAlt="" />

@@ -167,7 +167,7 @@ export const NavigationItemArrow = styled.img`
 `
 
 export const NavigationHeader = styled.h3`
-  font-size: ${({ theme }) => theme.fontSize.m};
+  font-size: ${({ theme }) => theme.fontSize.xs};
   font-weight: 500;
   text-transform: uppercase;
   color: ${({ theme, isGreen }) => (isGreen ? theme.colors.bgTextSand : theme.colors.textGreen)};

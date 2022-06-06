@@ -3,8 +3,8 @@ import greenBackground from '../../../images/Rectangle.svg'
 import sandBackground from '../../../images/RectangleSand.svg'
 
 export const Wrapper = styled.div`
+  display: ${({ isMobile }) => (isMobile ? "flex" : "none")};
   width: 100vw;
-  display: flex;
   align-items: center;
   justify-content: center;
   position: relative;

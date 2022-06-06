@@ -3,7 +3,7 @@ import { Logo, Wrapper } from "./LogoTitle.styles"
 
 const LogoTitle = ({ isMobile, logoUrl, id }) => {
   return (
-    <Wrapper id={id} isMobile={isMobile}>
+    <Wrapper to="/" id={id} isMobile={isMobile}>
       <Logo src={logoUrl} alt="" />
     </Wrapper>
   )

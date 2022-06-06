@@ -4,7 +4,7 @@ import Section from "../layout/Section"
 import ContactForm from "../components/organisms/ContactForm/ContactForm"
 import TitledParagraphWithImage from "../components/organisms/TitledParagraphWithImage/TitledParagraphWithImage"
 import logo from "../images/Group 9.svg"
-import finalFlower from "../images/blue 1.svg"
+import finalFlower from "../images/blue 1.png"
 import LogoTitle from "../components/atoms/LogoTitle/LogoTitle"
 import MobileNavMenu from "../components/organisms/MobileNavMenu/MobileNavMenu"
 

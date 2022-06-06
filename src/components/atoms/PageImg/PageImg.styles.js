@@ -29,7 +29,8 @@ export const StyledImage = styled.img`
   width: 100%;
 
   ${({ theme }) => theme.media.desktop} {
-    max-height: ${({ isFinal }) => (isFinal ? "95vh" : "98%")};   
+    width: ${({ isFinal }) => (isFinal ? "auto" : "100%")};
+    max-height: ${({ isFinal }) => (isFinal ? "90vh" : "98%")};   
     object-position: ${({ isFinal }) => (isFinal ? "bottom" : "center")};
   }
 `

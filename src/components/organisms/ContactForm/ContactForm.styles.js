@@ -60,7 +60,6 @@ export const StyledInput = styled.input`
   justify-content: center;
   outline: none;
   border: none;
-  box-shadow: ${({ theme, isError }) => (isError ? `0px 4px 10px ${theme.colors.wrongInput}` : "none")};
 
   ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: ${({ theme }) => theme.colors.phText};
@@ -95,7 +94,6 @@ export const StyledTextArea = styled.textarea`
   justify-content: center;
   outline: none;
   border: none;
-  box-shadow: ${({ theme, isError }) => (isError ? `0px 4px 10px ${theme.colors.wrongInput}` : "none")};
 
   ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: ${({ theme }) => theme.colors.phText};
@@ -152,16 +150,5 @@ export const SendButton = styled.button`
     text-transform: none;
     border-radius: 10px;
     align-self: flex-end;
-  }
-`
-
-export const StyledOrnament = styled.img`
-  display: none;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-
-  ${({ theme }) => theme.media.desktop} {
-    display: initial;
   }
 `

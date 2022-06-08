@@ -30,7 +30,7 @@ export const theme = {
     l: 'clamp(2.4rem, 2.5vw, 4.8rem)',
     ml: 'clamp(2.4rem, 1.6667vw, 3.2rem)',
     mobile: 'clamp(1.8rem, 0.4500rem + 3.7500vw, 3.6rem)',
-    m: 'clamp(1.6rem, 0.0043rem + 1.5603vw, 3rem)',
+    m: 'clamp(1.6rem, 1.4583vw, 2.8rem)',
     s: 'clamp(1.4rem, 1.25vw, 2.4rem)',
     xs: 'clamp(1.2rem, 0.0018rem + 0.9365vw, 1.8rem)',
     xxs: 'clamp(1.2rem, 0.0022rem + 0.7801vw, 1.5rem)'

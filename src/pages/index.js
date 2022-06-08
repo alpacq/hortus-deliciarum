@@ -25,7 +25,7 @@ const IndexPage = () => {
   const weddingText = 'Nasze doświadczenie rękodzielnicze, artystycznei florystyczne sprawia, że każda ślubna aranżacja dopięta jest na ostatni guzik. Będziemy zaszczyceni mogąc zatroszczyć się o Wasze sale weselne, ślubne bukiety, wianki czy podarunki dla rodziców.'
   const meetUsTitle = 'Poznaj nas'
   const meetUsText = 'Szukasz kwiaciarni w Warszawie? Sami określilibyśmy się raczej jako mała, rodzinna pracownia florystyczna. Hortus Deliciarum to miejsce z duszą, powstałe z potrzeby tworzenia i dzielenia się pięknem.'
-  const contactTitle = 'Czekamy\nna ciebie'
+  const contactTitle = 'Czekamy na ciebie'
   const contactInfo = "adres\nul. Jana Kasprowicza 68, lok. 3c\n01-949 Warszawa\n\ngodziny otwarcia\nponiedziałek – piątek: 10.00 - 19.00\nsobota: 10.00 - 16.00\n\nkontakt\ntel. +48 519 059 013\ne-mail: kontakt@hortusdeliciarum.pl"
   const mottoText = "Miejsce tworzone rodzinną pasją umiłowania piękna."
   const formTitle = "Napisz do nas"
@@ -94,7 +94,10 @@ const IndexPage = () => {
           linkUrl="/formularz"
           mobileButtonText="skontaktuj się"
           title={contactTitle}
-          text={contactInfo.replace("adres", "<strong>adres</strong>").replace("godziny otwarcia", "<strong>godziny otwarcia</strong>").replace("kontakt", "<strong>kontakt</strong>")}
+          text={contactInfo.replace(`ul. Jana Kasprowicza 68, lok. 3c\n01-949 Warszawa`, `<a href="https://www.google.pl/maps/place/Hortus+Deliciarum+-+pracownia+florystyczna/@52.2865879,20.9376573,17z/data=!3m1!4b1!4m5!3m4!1s0x471ecbc914681923:0x2ed7ecebd338ebd2!8m2!3d52.2865846!4d20.939846" target="_blank" rel="noopener noreferrer">ul. Jana Kasprowicza 68, lok. 3c\n01-949 Warszawa</a>`)
+                           .replace("adres", "<strong>adres</strong>")
+                           .replace("godziny otwarcia", "<strong>godziny otwarcia</strong>")
+                           .replace("kontakt", "<strong>kontakt</strong>")}
           isGreen
           imageUrl={finalFlower}
           imageAlt="" />

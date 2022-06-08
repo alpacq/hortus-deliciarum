@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
   ${({ theme }) => theme.media.desktop} {
     width: ${({ isFullscreen }) => (isFullscreen ? "84.5vw" : "100%")};
     display: ${({ isMobile }) => (isMobile ? "none" : "flex")};
-    max-height: none;
+    max-height: ${({ isFullscreen }) => (isFullscreen ? "none" : "77vh")};
   }
 `
 
@@ -24,7 +24,7 @@ export const CarouselWrapper = styled.div`
 
   ${({ theme }) => theme.media.desktop} {
     max-width: 73vw;
-    max-height: 96vh;
+    max-height: ${({ isFullscreen }) => (isFullscreen ? "96vh" : "77vh")};
   }
 `
 

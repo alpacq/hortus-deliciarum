@@ -22,7 +22,10 @@ const ContactPage = () => {
           isMobile
           isFinal
           title={contactTitle}
-          text={contactInfo.replace("adres", "<strong>adres</strong>").replace("godziny otwarcia", "<strong>godziny otwarcia</strong>").replace("kontakt", "<strong>kontakt</strong>")}
+          text={contactInfo.replace(`ul. Jana Kasprowicza 68, lok. 3c\n01-949 Warszawa`, `<a href="https://www.google.pl/maps/place/Hortus+Deliciarum+-+pracownia+florystyczna/@52.2865879,20.9376573,17z/data=!3m1!4b1!4m5!3m4!1s0x471ecbc914681923:0x2ed7ecebd338ebd2!8m2!3d52.2865846!4d20.939846" target="_blank" rel="noopener noreferrer">ul. Jana Kasprowicza 68, lok. 3c\n01-949 Warszawa</a>`)
+                           .replace("adres", "<strong>adres</strong>")
+                           .replace("godziny otwarcia", "<strong>godziny otwarcia</strong>")
+                           .replace("kontakt", "<strong>kontakt</strong>")}
           hasMobileButton
           mobileButtonText="skontaktuj się"
           linkUrl="/formularz"

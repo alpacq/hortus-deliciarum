@@ -13,6 +13,6 @@ export const Wrapper = styled.div`
 `
 
 export const StyledLogo = styled.img`
-  width: clamp(1.0556rem, 0.0069rem + 2.9131vw, 5.6rem);
-  height: clamp(1.0556rem, 0.0069rem + 2.9131vw, 5.6rem);
+  width: clamp(0.80625rem, 2.2396vw, 4.3rem);
+  height: clamp(0.80625rem, 2.2396vw, 4.3rem);
 `

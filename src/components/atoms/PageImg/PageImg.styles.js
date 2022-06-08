@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   margin: 0;
   padding: 0;
   position: relative;  
-  z-index: ${({ isFinal }) => (isFinal ? "102 !important;" : "1")};
+  z-index: 1;
 
   ${({ theme }) => theme.media.desktop} {
     align-items: ${({ isFinal }) => (isFinal ? "flex-end" : "center")};
@@ -18,7 +18,7 @@ export const Wrapper = styled.div`
     flex: 40%;
     height: ${({ isFinal }) => (isFinal ? "100%" : "98%")};    
     max-height: ${({ isFinal }) => (isFinal ? "100%" : "98%")};
-    width: 100%;
+    max-width: 54.2rem;
   }
 `
 

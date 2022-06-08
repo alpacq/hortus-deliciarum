@@ -18,4 +18,11 @@ export const Paragraph = styled.p`
       font-weight: normal;
     }
   }
+
+  a {
+    text-decoration: underline;
+    text-transform: none;
+    color: inherit;
+    cursor: pointer;
+  }
 `

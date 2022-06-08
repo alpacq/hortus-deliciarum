@@ -19,7 +19,7 @@ const Carousel = ({ isFullscreen, isMobile, imageUrls, moveBy, isGreen, numSlide
 
   return (
     <Wrapper isFullscreen={isFullscreen} isMobile={isMobile}>
-      <CarouselWrapper moveBy={moveBy} style={{ transform: `translateX(calc(${translate}vw + 50%))`}}>
+      <CarouselWrapper isFullscreen={isFullscreen} moveBy={moveBy} style={{ transform: `translateX(calc(${translate}vw + 50%))`}}>
         {imageUrls.map((imageUrl, index) => (
           <ContainerWrapper moveBy={moveBy} key={index}>
             <ItemWrapper moveBy={moveBy}>

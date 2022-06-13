@@ -43,6 +43,7 @@ const MobileNavMenu = ({ isExpandable, isGreen }) => {
         </NavigationWrapper>
       </NavigationWithHeaderWrapper>
       <DropdownWrapper isClicked={isClicked}>
+        <SubNavigationItem to="/oferta">w naszych progach</SubNavigationItem>
         <SubNavigationItem to="/oferta#ciete">kwiaty cięte</SubNavigationItem>
         <SubNavigationItem to="/oferta#doniczkowe">rośliny doniczkowe</SubNavigationItem>
         <SubNavigationItem to="/oferta#dodatki">dodatki</SubNavigationItem>

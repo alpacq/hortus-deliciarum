@@ -49,7 +49,7 @@ export const ItemWrapper = styled.div`
 `
 
 export const LeftOverlayWrapper = styled.div`
-  height: 100%;
+  height: 105%;
   position: absolute;
   left: -14vw;
   width: 21.5vw;
@@ -66,7 +66,7 @@ export const LeftOverlayWrapper = styled.div`
 `
 
 export const RightOverlayWrapper = styled.div`
-  height: 100%;
+  height: 105%;
   position: absolute;
   right: -8vw;
   width: 15.5vw;

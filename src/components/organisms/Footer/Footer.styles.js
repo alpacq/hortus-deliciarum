@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   margin: 0;
   z-index: 100;

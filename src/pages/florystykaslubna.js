@@ -10,7 +10,6 @@ import wedC from "../images/wedC.png"
 import wedD from "../images/wedD.png"
 import wedE from "../images/wedE.png"
 import ornament from "../images/titleOrnament.svg"
-import wedFirst from "../images/wedFirst.png"
 import wed1 from "../images/wedding (1).png"
 import wed2 from "../images/wedding (2).png"
 import wed3 from "../images/wedding (3).png"
@@ -19,7 +18,11 @@ import wed5 from "../images/wedding (5).png"
 import wed6 from "../images/wedding (6).png"
 import wed7 from "../images/wedding (7).png"
 import wed8 from "../images/wedding (8).png"
-import wedLast from "../images/wedLast.png"
+import wed9 from "../images/wedding (9).png"
+import wed10 from "../images/wedding (10).png"
+import wed11 from "../images/wedding (11).png"
+import wed12 from "../images/wedding (12).png"
+import wed13 from "../images/wedding (13).png"
 import mobileOrnamentSandBig from "../images/mobileOrnamentSandBig.svg"
 import OrnamentImg from "../components/atoms/OrnamentImg/OrnamentImg"
 import ColImg from "../components/atoms/ColImg/ColImg"
@@ -38,7 +41,7 @@ const WeddingsPage = () => {
   const thirdPar = "Będziemy zaszczyceni mogąc zatroszczyć się o Wasze ślubne przedsięwzięcie! Nasz kalendarz na 2022 rok pozostaje otwarty. Jeśli więc szukacie florystek ślubnych w Warszawie i okolicach – zapraszamy do kontaktu!"
   const additionalText = "Każdą zainteresowaną współpracą z nami Parę Młodą zapraszamy do pracowni, aby ustalić wspólnie zamysł, estetykę i budżet. Cena florystyki ślubnej zależy od Waszego pomysłu, a co za tym idzie – ilości dekoracji. Po spotkaniu wyślemy spersonalizowaną ofertę wraz z wyceną. Do Was należy ostateczna decyzja."
   const strongText = "Niezależnie od tego czy bliższe Waszemu sercu są klimaty boho czy glamour – możemy obiecać, że stworzymy dla Was coś pięknego."
-  const wedImages = [wedFirst, wed8, wed7, wed6, wed5, wed4, wed3, wed2, wed1, wedLast]
+  const wedImages = [wed1, wed2, wed3, wed4, wed5, wed6, wed7, wed8, wed9, wed10, wed11, wed12, wed13]
 
   return (
     <Layout title="Florystyka ślubna" >
@@ -66,8 +69,8 @@ const WeddingsPage = () => {
           <ColImg imageUrl={wedE} imageAlt="" />
         </LongTable>
       </Section>
-      <Carousel isFullscreen imageUrls={wedImages} moveBy={100} numSlides={10} visibleSlides={1} />
-      <Carousel isMobile imageUrls={wedImages} moveBy={85} numSlides={10} visibleSlides={1} />
+      <Carousel isFullscreen imageUrls={wedImages} moveBy={100} numSlides={13} visibleSlides={1} />
+      <Carousel isMobile imageUrls={wedImages} moveBy={85} numSlides={13} visibleSlides={1} />
       <Button isBig isCentered to="/formularz">umów się na spotkanie</Button>
       <OrnamentImg isMobile hasMargin imageUrl={mobileOrnamentSandBig} imageAlt="" />
       <MobileNavItem imageUrl={arrowUp} isScrollTop text="wróć do góry" />

@@ -5,7 +5,7 @@ import TitledParagraph from "../components/molecules/TitledParagraph/TitledParag
 import TitledParagraphWithImage from "../components/organisms/TitledParagraphWithImage/TitledParagraphWithImage"
 import logo from "../images/Group 9.svg"
 import headerImg from "../images/IMG_9633 1 (2).png"
-import flowers9x9 from "../images/Group 17.png"
+import flowers9x9 from "../images/Group 19.png"
 import donica from "../images/IMG_9633 1 (3).png"
 import weddingShoot from "../images/Fot-107 1.png"
 import ciete1 from "../images/ciete1.png"

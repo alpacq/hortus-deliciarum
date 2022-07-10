@@ -8,14 +8,17 @@ import NavigationBar from "../components/organisms/NavigationBar/NavigationBar"
 import Footer from "../components/organisms/Footer/Footer"
 import { FooterLinkTextProvider } from "../providers/FooterLinkTextProvider"
 
-const Layout = ({ title, isScrollSnap, isGreen, screensHeight, children }) => {
+const Layout = ({ title, metaTag, isScrollSnap, isGreen, screensHeight, children }) => {
+  const keywords = 'kwiaciarnia warszawa, kwiaty warszawa, kwiaty doniczkowe warszawa, rośliny doniczkowe warszawa, suszone kwiaty warszawa, flower box warszawa, florystyka warszawa, bukiet 100 róż warszawa, bukiet ślubny warszawa cena, rośliny w szkle warszawa, wianek ślubny warszawa, florystka na wesele warszawa, pracownia florystyczna warszawa, świece sojowe warszawa, kwiaciarnia bielany warszawa, kwiaciarnia warszawa centrum'
+
   return (
     <ThemeProvider theme={theme}>
       <FooterLinkTextProvider>
         <GlobalStyle />
         <Helmet>
-          <meta charSet="utf-8" />
           <title>{title}</title>
+          <meta name="description" content={metaTag} />
+          <meta name="keywords" content={keywords} />
           <link rel="icon" type="image/png" href={logo} sizes="32x32" />
         </Helmet>
         {(isScrollSnap ? 

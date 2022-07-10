@@ -51,8 +51,18 @@ import MobileNavItem from "../components/molecules/MobileNavItem/MobileNavItem"
 import MobileNavMenu from "../components/organisms/MobileNavMenu/MobileNavMenu"
 
 const OfferPage = () => {
+  const metaTag = 'Oprócz kolekcji kwiatów ciętych i roślin znajdziecie tu sojowe świece, ceramikę, biżuterię, portugalskie mydła czy flowerboxy.'
   const addsImages = [adds1, adds2, adds3, adds4, adds5, adds6, adds7, adds8, adds9, adds10, adds11, adds12, adds13]
+  const addsAlts = [
+    "Flowerboxy", "Naturalne mydła portugalskie", "Ceramika i rękodzieło", "Naturalne świece sojowe", "Zestawy prezentowe", "Donice i osłonki",
+    "Ceramika i dodatki", "Ręcznie wykonana ceramika", "Eleganckie mydła portugalskie", "Pomysły na prezent", "Kartki okolicznościowe", 
+    "Duży wybór zapachowych świec sojowych", "Welurowe fowerboxy"
+  ]
   const wynImages = [weddingShoot, wyn1, wyn6, wyn5, wyn4, wyn3, wyn2]
+  const wynAlts = [
+    "Przestrzeń do sesji zdjęciowych", "Niekonwencjonalne sesje ślubne", "Wynajem pracowni", "Sesje produktowe",
+    "Współpraca do sesji zdjęciowych", "Wynajem pracowni do warsztatów", "Warsztaty kaligraficzne"
+  ]
   const wynMobileImages = [wynM1, wynM2, wynM3, wynM4, wynM5, wynM6, wynM7]
   const offerTitle = 'W naszych progach...'
   const offerText = 'W naszej warszawskiej pracowni czekają na Was kwiaty cięte, rośliny doniczkowe oraz rękodzieło. Dla miłośników tego ostatniego mamy sojowe świece, ceramikę, biżuterię, portugalskie mydła czy kompozycje z drewna. Na zamówienie chętnie wykonamy lasy w szkle, suszone bukiety i flowerboxy.\n\nPoznajcie naszą ofertę!'
@@ -69,7 +79,7 @@ const OfferPage = () => {
   const wynajemText = 'Jeśli szukacie przestrzeni z duszą i klimatem, gdzie stworzycie niecodzienną sesję zdjęciową, sesję ślubną lub zorganizujecie warsztaty – chętnie zaangażujemy się w podobne projekty. Na swoim koncie mamy sesje zdjęciowe, nagrania, warsztaty a nawet... teledysk.\n\nPomożemy zaaranżować pracownię wedle Waszych potrzeb.'
 
   return (      
-    <Layout title="Oferta" isScrollSnap>
+    <Layout title="Bukiety, rośliny, ceramika i dodatki – poznajcie naszą ofertę!" metaTag={metaTag} isScrollSnap>
       <LogoTitle id="top" logoUrl={logo} isMobile />
       <Section isMobile>
         <MobileNavMenu isExpandable />
@@ -78,7 +88,7 @@ const OfferPage = () => {
           title={offerTitle}
           text={offerText.replace("Poznajcie naszą ofertę!", "<span>Poznajcie naszą ofertę!</span>")}
           imageUrl={headerImg}
-          imageAlt="rośliny doniczkowe na pianinie"
+          imageAlt="Rośliny doniczkowe"
         />
       </Section>
       <Section id="ciete" isMobile> 
@@ -118,18 +128,19 @@ const OfferPage = () => {
           linkUrl="/formularz"
           isButtonRight
           imageUrl={donica} 
-          imageAlt="kwiaty doniczkowe" />          
+          imageAlt="Rośliny do domu" />          
       </Section>  
       <Section id="dodatki" isMobile isMultiCarousel>
         <TitledParagraphWithCarousel
           title={dodatkiTitle}
           text={dodatkiText}
-          imageUrls={addsImages} />
+          imageUrls={addsImages}
+          imageAlts={addsAlts} />
         <TitledParagraph 
           isMobile
           title={dodatkiTitleMobile}
           text={dodatkiText} />
-        <Carousel isMobile imageUrls={addsImages} moveBy={95} numSlides={13} visibleSlides={1} />
+        <Carousel isMobile imageUrls={addsImages} imageAlts={addsAlts} moveBy={95} numSlides={13} visibleSlides={1} />
         <OrnamentImg isMobile hasMargin imageUrl={mobileOrnamentSandBig} imageAlt="" />
       </Section>
       <Section id="aranzacja" isMobile>
@@ -144,7 +155,7 @@ const OfferPage = () => {
           buttonText="napisz do nas"
           linkUrl="/formularz"
           imageUrl={aranz}
-          imageAlt="aranżacja przestrzeni" />
+          imageAlt="Aranżacja biur, wesel i mieszkań" />
       </Section>
       <Section id="wynajem" isMobile isMultiCarousel>
         <TitledParagraphWithSideCarousel 
@@ -154,7 +165,8 @@ const OfferPage = () => {
           hasButton
           buttonText="umów termin"
           linkUrl="/formularz"
-          imageUrls={wynImages} />
+          imageUrls={wynImages}
+          imageAlts={wynAlts} />
         <TitledParagraph
           isMobile
           title={wynajemTitle}
@@ -163,7 +175,7 @@ const OfferPage = () => {
           isMobileButtonUp
           mobileButtonText="umów termin"
           linkUrl="/formularz" />
-        <Carousel isMobile imageUrls={wynMobileImages} moveBy={95} numSlides={7} visibleSlides={1} />
+        <Carousel isMobile imageUrls={wynMobileImages} imageAlts={wynAlts} moveBy={95} numSlides={7} visibleSlides={1} />
         <OrnamentImg isMobile hasMargin imageUrl={mobileOrnamentSandBig} imageAlt="" />
         <MobileNavItem imageUrl={arrowUp} isScrollTop text="wróć do góry" />
       </Section>

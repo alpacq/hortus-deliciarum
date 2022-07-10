@@ -35,6 +35,7 @@ import arrowUp from "../images/mobileArrowUpSand.svg"
 import MobileNavMenu from "../components/organisms/MobileNavMenu/MobileNavMenu"
 
 const WeddingsPage = () => {
+  const metaTag = 'Bukiety ślubne, butonierki, wianek ślubny, prezenty dla rodziców. Będziemy zaszczyceni mogąc zatroszczyć się o Wasze wesele!'
   const title = "Ślub jak z bajki"
   const firstPar = "Oferujemy aranżację wesela od A do Z. Możecie być więc spokojni o bukiet ślubny, butonierki czy podarunki dla rodziców. Wyczarujemy dla Was także najpiękniejszy wianek ślubny. Nasze doświadczenie rękodzielnicze, artystyczne i florystyczne sprawia, że każda ślubna aranżacja dopięta jest na ostatni guzik."
   const secondPar = "Wybrane przez Was sale weselne traktujemy jak czyste płótno – wykańczamy je z dbałością o najmniejszy szczegół."
@@ -42,9 +43,14 @@ const WeddingsPage = () => {
   const additionalText = "Każdą zainteresowaną współpracą z nami Parę Młodą zapraszamy do pracowni, aby ustalić wspólnie zamysł, estetykę i budżet. Cena florystyki ślubnej zależy od Waszego pomysłu, a co za tym idzie – ilości dekoracji. Po spotkaniu wyślemy spersonalizowaną ofertę wraz z wyceną. Do Was należy ostateczna decyzja."
   const strongText = "Niezależnie od tego czy bliższe Waszemu sercu są klimaty boho czy glamour – możemy obiecać, że stworzymy dla Was coś pięknego."
   const wedImages = [wed1, wed2, wed3, wed4, wed5, wed6, wed7, wed8, wed9, wed10, wed11, wed12, wed13]
+  const wedAlts = [
+    "Dekoracje kwiatowe na stół", "Dekoracja stołu Państwa Młodych", "Bukiety ślubne boho", "Wesele boho", "Bukiet Panny Młodej", 
+    "Dekoracje na wesele", "Inspiracje na wesele", "Dekoracja sali weselnej", "Girlanda z kwiatów ciętych", "Wianek boho na ślub",
+    "Peonie na ślub", "Detale na ślub", "Bukiet Panny Młodej"
+  ]
 
   return (
-    <Layout title="Florystyka ślubna" >
+    <Layout title="Kwiaty na ślub i aranżacja wesel od A do Z – zapraszamy do kontaktu!" metaTag={metaTag} >
       <LogoTitle id="top" logoUrl={logo} isMobile />
       <Section isLong>
         <MobileNavMenu isExpandable />
@@ -58,19 +64,19 @@ const WeddingsPage = () => {
         <Button isMobile noMargin to="/formularz">skontaktuj się</Button>
         <ColImg isMobile imageUrl={wedB} imageAlt="" />
         <LongTable>
-          <ColImg imageUrl={wedA} imageAlt="" />
-          <ColImg imageUrl={wedB} imageAlt="" />
+          <ColImg imageUrl={wedA} imageAlt="Aranżacja wesela w Warszawie" />
+          <ColImg imageUrl={wedB} imageAlt="Wesele w plenerze" />
         </LongTable>
         <Paragraph>{additionalText}</Paragraph>
         <Paragraph><strong>{strongText}</strong></Paragraph>        
-        <ColImg hasMargin isDesktop imageUrl={wedC} imageAlt="" />
+        <ColImg hasMargin isDesktop imageUrl={wedC} imageAlt="Wymarzone bukiety ślubne" />
         <LongTable>
-          <ColImg imageUrl={wedD} imageAlt="" />
-          <ColImg imageUrl={wedE} imageAlt="" />
+          <ColImg imageUrl={wedD} imageAlt="Bukiet ślubny z jedwabną wstążką" />
+          <ColImg imageUrl={wedE} imageAlt="Girlanda z kwiatów" />
         </LongTable>
       </Section>
-      <Carousel isFullscreen imageUrls={wedImages} moveBy={100} numSlides={13} visibleSlides={1} />
-      <Carousel isMobile imageUrls={wedImages} moveBy={85} numSlides={13} visibleSlides={1} />
+      <Carousel isFullscreen imageUrls={wedImages} imageAlts={wedAlts} moveBy={100} numSlides={13} visibleSlides={1} />
+      <Carousel isMobile imageUrls={wedImages} imageAlts={wedAlts} moveBy={85} numSlides={13} visibleSlides={1} />
       <Button isBig isCentered to="/formularz">umów się na spotkanie</Button>
       <OrnamentImg isMobile hasMargin imageUrl={mobileOrnamentSandBig} imageAlt="" />
       <MobileNavItem imageUrl={arrowUp} isScrollTop text="wróć do góry" />

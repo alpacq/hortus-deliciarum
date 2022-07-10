@@ -22,6 +22,7 @@ import arrowUp from "../images/mobileArrowUpSand.svg"
 import MobileNavMenu from "../components/organisms/MobileNavMenu/MobileNavMenu"
 
 const MeetUsPage = () => {
+  const metaTag = 'Nasza kwiaciarnia to nie tylko kwiaty i dodatki. W naszych progach możecie poczuć klimat rzemiosła i rękodzieła, a w naszych pracach serce, które wkładamy w każdą roślinną kompozycję.'
   const title = "O zamiłowaniu do \nsztuki i rękodzieła"
   const mobileTitle = "O sztuce i rękodziele"
   const firstPar = "Choć na pierwszy rzut oka możemy jawić się jako kwiaciarnia, dla nas to określenie raczej nie oddaje klimatu miejsca jakim jest Hortus Deliciarum. Sami określilibyśmy się jako mała, rodzinna pracownia florystyczna – miejsce rodem z Alicji w Krainie Czarów. W naszych progach możecie poczuć klimat rzemiosła i rękodzieła, a w naszych pracach serce, które wkładamy w każdą roślinną (i nie tylko) kompozycję."
@@ -36,7 +37,7 @@ const MeetUsPage = () => {
   const sixthPar = "Nie pozostaje nam nic innego jak tylko zaprosić Was do naszej kwiaciarni na Kasprowicza 68 w Warszawie, poznać nasz świat i zostać w nim na dłużej!"
 
   return (
-    <Layout title="Poznaj nas">
+    <Layout title="Jesteśmy małą, rodzinną pracownią florystyczną z doświadczeniem rękodzielniczym i artystycznym. Znajdziecie nas na Starych Bielanach." metaTag={metaTag}>
       <LogoTitle id="top" isMobile logoUrl={logo} />
       <Section isLong>
         <MobileNavMenu isExpandable />
@@ -46,17 +47,17 @@ const MeetUsPage = () => {
         <Paragraph>{firstPar}</Paragraph>
         <Motto isBold isMobile text={mottoText} />
         <LongTable isMobile>
-          <ColImg imageUrl={pn1} imageAlt="" />
-          <ColImg imageUrl={pn2} imageAlt="" />
+          <ColImg imageUrl={pn1} imageAlt="Kompozycje z kwiatów ciętych" />
+          <ColImg imageUrl={pn2} imageAlt="Świeże kwiaty cięte" />
         </LongTable>
         <Paragraph dangerouslySetInnerHTML={richSecondPar} />
         <Paragraph>{thirdPar}</Paragraph>
-        <ColImg imageUrl={pn3} imageAlt="" />
+        <ColImg imageUrl={pn3} imageAlt="Kwiaciarnia z duszą" />
         <Paragraph><StyledLink href="https://www.instagram.com/hortusdeliciarum/" target="_blank" rel="noopener noreferrer">Na naszym Instagramie</StyledLink>{fourthPar}</Paragraph>
         <Paragraph>{fifthPar}</Paragraph>
         <LongTable isMobile>
-          <ColImg imageUrl={pn4} imageAlt="" />
-          <ColImg imageUrl={pn5} imageAlt="" />
+          <ColImg imageUrl={pn4} imageAlt="Miejsce vintage w Warszawie" />
+          <ColImg imageUrl={pn5} imageAlt="Rękodzieło i restauracja mebli" />
         </LongTable>
         <Paragraph><strong>{sixthPar}</strong></Paragraph>
         <OrnamentImg isMobile imageUrl={mobileOrnamentSandBig} imageAlt="" />

@@ -9,12 +9,13 @@ import LogoTitle from "../components/atoms/LogoTitle/LogoTitle"
 import MobileNavMenu from "../components/organisms/MobileNavMenu/MobileNavMenu"
 
 const ContactPage = () => {
+  const metaTag = 'Masz pytania? Zadzwoń lub skorzystaj z formularza kontaktowego.'
   const contactTitle = "Czekamy na ciebie"
   const contactInfo = "adres\nul. Jana Kasprowicza 68, lok. 3c\n01-949 Warszawa\n\ngodziny otwarcia\nponiedziałek – piątek: 10.00 - 19.00\nsobota: 10.00 - 16.00\n\nkontakt\ntel. +48 519 059 013\ne-mail: kontakt@hortusdeliciarum.pl"
   const formTitle = "Napisz do nas"
 
   return (
-    <Layout isScrollSnap title="Kontakt">
+    <Layout isScrollSnap title="Czekamy na Ciebie na Kasprowicza 68!" metaTag={metaTag}>
       <LogoTitle isMobile logoUrl={logo} />
       <Section isFinal isMobile>
         <MobileNavMenu isExpandable />
@@ -30,7 +31,7 @@ const ContactPage = () => {
           mobileButtonText="skontaktuj się"
           linkUrl="/formularz"
           imageUrl={finalFlower}
-          imageAlt="" />
+          imageAlt="Skontaktuj się z nami!" />
       </Section>
       <Section>
         <ContactForm title={formTitle} />

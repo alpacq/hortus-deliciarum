@@ -3,7 +3,7 @@ import Carousel from "../../molecules/Carousel/Carousel"
 import TitledParagraph from "../../molecules/TitledParagraph/TitledParagraph"
 import { SliderWrapper, TextWrapper, Wrapper } from "./TitledParagraphWithCarousel.styles"
 
-const TitledParagraphWithCarousel = ({ isMobile, title, text, isGreen, imageUrls }) => {
+const TitledParagraphWithCarousel = ({ isMobile, title, text, isGreen, imageUrls, imageAlts }) => {
 
   return (
     <Wrapper isMobile={isMobile}>
@@ -15,7 +15,7 @@ const TitledParagraphWithCarousel = ({ isMobile, title, text, isGreen, imageUrls
           isGreen={isGreen} />
       </TextWrapper>
       <SliderWrapper>
-        <Carousel imageUrls={imageUrls} moveBy={30} numSlides={13} visibleSlides={3}/>
+        <Carousel imageUrls={imageUrls} imageAlts={imageAlts} moveBy={30} numSlides={13} visibleSlides={3}/>
       </SliderWrapper>
     </Wrapper>
   )

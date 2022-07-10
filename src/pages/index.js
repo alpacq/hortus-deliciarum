@@ -11,7 +11,7 @@ import circle from "../images/kółko.png"
 import flower from "../images/kwiatek.png"
 import mobileFlower from "../images/mobileflower.png"
 import offerBuquet from "../images/20211214_122512 1.png"
-import weddingComposition from "../images/Dominika&Bartłomiej_298 2.png"
+import weddingComposition from "../images/wedA.png"
 import ourFlowerShop from "../images/IMG_9633 1.png"
 import finalFlower from "../images/blue 1.png"
 import arrowUp from "../images/mobileArrowUpGreen.svg"
@@ -20,6 +20,7 @@ import MobileNavMenu from "../components/organisms/MobileNavMenu/MobileNavMenu"
 
 const IndexPage = () => {
   const offerTitle = 'Oferta'
+  const metaTag = 'Szukasz kwiaciarni w Warszawie? W naszych progach znajdziesz kwiaty, rośliny i rękodzieło. Zajmujemy się także florystyką ślubną.'
   const offerText = 'Choć specjalizujemy się w bukietach, w tym także bukietach ślubnych, i zazielenianiu Waszych mieszkań, świeże kwiaty cięte i rośliny doniczkowe to tylko część piękna, które czeka w progach naszej pracowni na Starych Bielanach...'
   const weddingTitle = 'Florystyka ślubna'
   const weddingText = 'Nasze doświadczenie rękodzielnicze, artystycznei florystyczne sprawia, że każda ślubna aranżacja dopięta jest na ostatni guzik. Będziemy zaszczyceni mogąc zatroszczyć się o Wasze sale weselne, ślubne bukiety, wianki czy podarunki dla rodziców.'
@@ -31,10 +32,10 @@ const IndexPage = () => {
   const formTitle = "Napisz do nas"
 
   return (
-    <Layout isScrollSnap title="Hortus Deliciarum" isGreen>
+    <Layout isScrollSnap title="Pracownia florystyczna w sercu warszawskich Bielan." metaTag={metaTag} isGreen>
       <LandingImage imageUrl={circle} />
-      <LandingImage imageUrl={flower} isTop />
-      <LandingImage imageUrl={mobileFlower} isMobile />
+      <LandingImage imageUrl={flower} imageAlt="Pracownia florystyczna w Warszawie" isTop />
+      <LandingImage imageUrl={mobileFlower} imageAlt="Pracownia florystyczna w Warszawie" isMobile />
       <LogoTitle id="top" logoUrl={logo}/>
       <Section id="mainpage" isMobile>
         <MobileNavMenu isGreen />
@@ -53,7 +54,7 @@ const IndexPage = () => {
           linkUrl="/oferta"
           isButtonRight
           imageUrl={offerBuquet} 
-          imageAlt="duży bukiet artystyczny" />          
+          imageAlt="Kwiaty cięte i bukiety ślubne" />          
       </Section>  
       <Section isMobile>
         <TitledParagraphWithImage
@@ -68,7 +69,7 @@ const IndexPage = () => {
           mobileButtonText="zobacz więcej"
           linkUrl="/florystykaslubna"
           imageUrl={weddingComposition}
-          imageAlt="weselna kompozycja kwiatowa" />
+          imageAlt="Florystyka ślubna" />
       </Section>
       <Section isMobile>
         <TitledParagraphWithImage
@@ -83,7 +84,7 @@ const IndexPage = () => {
           linkUrl="/poznajnas"
           isButtonRight
           imageUrl={ourFlowerShop}
-          imageAlt="kwiaciarnia Hortus Deliciarum" />
+          imageAlt="Kwiaciarnia w Warszawie" />
       </Section>
       <Section isMobile>
         <TitledParagraphWithImage
@@ -100,7 +101,7 @@ const IndexPage = () => {
                            .replace("kontakt", "<strong>kontakt</strong>")}
           isGreen
           imageUrl={finalFlower}
-          imageAlt="" />
+          imageAlt="Skontaktuj się z nami!" />
         <MobileNavItem isGreen imageUrl={arrowUp} isScrollTop text="wróć do góry" />
       </Section>
       <Section isFinal>

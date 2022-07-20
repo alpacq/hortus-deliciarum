@@ -9,8 +9,8 @@ const Carousel = ({ isFullscreen, isMobile, imageUrls, imageAlts, moveBy, isGree
 
   const handleClick = (way) => {
     way === "left"
-      ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : currentSlide)
-      : setCurrentSlide(currentSlide < (numSlides - visibleSlides) ? currentSlide + 1 : currentSlide)
+      ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : (numSlides - visibleSlides))
+      : setCurrentSlide(currentSlide < (numSlides - visibleSlides) ? currentSlide + 1 : 0)
   }
 
   useEffect(() => {

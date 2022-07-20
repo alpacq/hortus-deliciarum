@@ -27,18 +27,10 @@ import adds12 from "../images/adds (12).png"
 import adds13 from "../images/adds (13).png"
 import aranz from "../images/aranz.png"
 import wyn1 from "../images/wynajem (1).png"
-import wyn2 from "../images/wynajem (2).png"
-import wyn3 from "../images/wynajem (3).png"
-import wyn4 from "../images/wynajem (4).png"
-import wyn5 from "../images/wynajem (5).png"
 import wyn6 from "../images/wynajem (6).png"
 import wynM1 from "../images/wynM1.png"
 import wynM2 from "../images/wynM2.png"
 import wynM3 from "../images/wynM3.png"
-import wynM4 from "../images/wynM4.png"
-import wynM5 from "../images/wynM5.png"
-import wynM6 from "../images/wynM6.png"
-import wynM7 from "../images/wynM7.png"
 import arrowUp from "../images/mobileArrowUpSand.svg"
 import mobileOrnamentSandBig from "../images/mobileOrnamentSandBig.svg"
 import TitledParagraphWithCarousel from "../components/organisms/TitledParagraphWithCarousel/TitledParagraphWithCarousel"
@@ -58,16 +50,15 @@ const OfferPage = () => {
     "Ceramika i dodatki", "Ręcznie wykonana ceramika", "Eleganckie mydła portugalskie", "Pomysły na prezent", "Kartki okolicznościowe", 
     "Duży wybór zapachowych świec sojowych", "Welurowe fowerboxy"
   ]
-  const wynImages = [weddingShoot, wyn1, wyn6, wyn5, wyn4, wyn3, wyn2]
+  const wynImages = [weddingShoot, wyn1, wyn6]
   const wynAlts = [
-    "Przestrzeń do sesji zdjęciowych", "Niekonwencjonalne sesje ślubne", "Wynajem pracowni", "Sesje produktowe",
-    "Współpraca do sesji zdjęciowych", "Wynajem pracowni do warsztatów", "Warsztaty kaligraficzne"
+    "Przestrzeń do sesji zdjęciowych", "Niekonwencjonalne sesje ślubne", "Wynajem pracowni"
   ]
-  const wynMobileImages = [wynM1, wynM2, wynM3, wynM4, wynM5, wynM6, wynM7]
+  const wynMobileImages = [wynM1, wynM2, wynM3]
   const offerTitle = 'W naszych progach...'
   const offerText = 'W naszej warszawskiej pracowni czekają na Was kwiaty cięte, rośliny doniczkowe oraz rękodzieło. Dla miłośników tego ostatniego mamy sojowe świece, ceramikę, biżuterię, portugalskie mydła czy kompozycje z drewna. Na zamówienie chętnie wykonamy lasy w szkle, suszone bukiety i flowerboxy.\n\nPoznajcie naszą ofertę!'
   const cieteTitle = 'Kwiaty cięte'
-  const cieteText = 'Choć z radością przygotujemy dla Was klasyczny bukiet 100 róż, przyznamy, że sami gustujemy w tych nieco bardziej ekstrawaganckich, szalonych, niecodziennych. A oprócz wykorzystania świeżych i pachnących kwiatów, tworzymy także bukiety suszone – długowieczne, które będą zdobić Wasze przestrzenie znacznie dłużej!\n\nOferujemy także dowóz kwiatów w cenie bukietu na terenie Starych Bielan.'
+  const cieteText = 'Choć z radością przygotujemy dla Was klasyczny bukiet 100 róż, przyznamy, że sami gustujemy w tych nieco bardziej ekstrawaganckich, szalonych, niecodziennych. A oprócz wykorzystania świeżych i pachnących kwiatów, tworzymy także bukiety suszone – długowieczne, które będą zdobić Wasze przestrzenie znacznie dłużej!'
   const doniczkoweTitle = 'Rośliny doniczkowe'
   const doniczkoweText = 'Nasze zielone królestwo po brzegi wypełniają rośliny doniczkowe zarówno dla początkujących jak i bardziej zaawansowanych miłośników. Dbamy o dostępność tych popularnych, ale również niecodziennych okazów, a do każdego z nich pomożemy dobrać odpowiednią osłonkę z całej naszej kolekcji. Nie zostawimy Was też bez wskazówek odnośnie opieki!'
   const dodatkiTitle = 'Jeszcze więcej piękna'
@@ -175,7 +166,7 @@ const OfferPage = () => {
           isMobileButtonUp
           mobileButtonText="umów termin"
           linkUrl="/formularz" />
-        <Carousel isMobile imageUrls={wynMobileImages} imageAlts={wynAlts} moveBy={95} numSlides={7} visibleSlides={1} />
+        <Carousel isMobile imageUrls={wynMobileImages} imageAlts={wynAlts} moveBy={95} numSlides={3} visibleSlides={1} />
         <OrnamentImg isMobile hasMargin imageUrl={mobileOrnamentSandBig} imageAlt="" />
         <MobileNavItem imageUrl={arrowUp} isScrollTop text="wróć do góry" />
       </Section>

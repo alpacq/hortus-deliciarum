@@ -9,7 +9,7 @@ const TitledParagraphWithSideCarousel = ({ isMobile, isReversed, title, text, is
       {isReversed ? 
       <Wrapper isReversed={isReversed} isMobile={isMobile}>
         <SliderWrapper>
-          <Carousel imageUrls={imageUrls} imageAlts={imageAlts} moveBy={40} numSlides={7} visibleSlides={1} />
+          <Carousel imageUrls={imageUrls} imageAlts={imageAlts} moveBy={40} numSlides={3} visibleSlides={1} />
         </SliderWrapper>
         <TextWrapper isGreen={isGreen}>
           <TitledParagraph

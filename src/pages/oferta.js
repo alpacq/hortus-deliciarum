@@ -58,7 +58,7 @@ const OfferPage = () => {
   const offerTitle = 'W naszych progach...'
   const offerText = 'W naszej warszawskiej pracowni czekają na Was kwiaty cięte, rośliny doniczkowe oraz rękodzieło. Dla miłośników tego ostatniego mamy sojowe świece, ceramikę, biżuterię, portugalskie mydła czy kompozycje z drewna. Na zamówienie chętnie wykonamy lasy w szkle, suszone bukiety i flowerboxy.\n\nPoznajcie naszą ofertę!'
   const cieteTitle = 'Kwiaty cięte'
-  const cieteText = 'Choć z radością przygotujemy dla Was klasyczny bukiet 100 róż, przyznamy, że sami gustujemy w tych nieco bardziej ekstrawaganckich, szalonych, niecodziennych. A oprócz wykorzystania świeżych i pachnących kwiatów, tworzymy także bukiety suszone – długowieczne, które będą zdobić Wasze przestrzenie znacznie dłużej!'
+  const cieteText = 'Choć z radością przygotujemy dla Was klasyczny bukiet 100 róż, przyznamy, że sami gustujemy w tych nieco bardziej ekstrawaganckich, szalonych, niecodziennych. A oprócz wykorzystania świeżych i pachnących kwiatów, tworzymy także bukiety suszone – długowieczne, które będą zdobić Wasze przestrzenie znacznie dłużej!\n\nJeśli chcecie zamówić wymarzony bukiet, zadzwońcie do nas z kilkudniowym wyprzedzeniem. Będzie czekał na Was do odbioru w pracowni.'
   const doniczkoweTitle = 'Rośliny doniczkowe'
   const doniczkoweText = 'Nasze zielone królestwo po brzegi wypełniają rośliny doniczkowe zarówno dla początkujących jak i bardziej zaawansowanych miłośników. Dbamy o dostępność tych popularnych, ale również niecodziennych okazów, a do każdego z nich pomożemy dobrać odpowiednią osłonkę z całej naszej kolekcji. Nie zostawimy Was też bez wskazówek odnośnie opieki!'
   const dodatkiTitle = 'Jeszcze więcej piękna'
@@ -84,21 +84,16 @@ const OfferPage = () => {
       </Section>
       <Section id="ciete" isMobile> 
         <TitledParagraphWithImage 
+          isCutted
           title={cieteTitle}
           text={cieteText}
-          hasButton
-          buttonText="zamów bukiet"
-          linkUrl="/formularz"
           imageUrl={flowers9x9} 
           imageAlt="bukiety artystyczne z kwiatów ciętych" />
-        <TitledParagraph 
+        <TitledParagraph
+          isCutted 
           isMobile
           title={cieteTitle}
-          text={cieteText}
-          hasMobileButton
-          isMobileButtonUp
-          mobileButtonText="zamów bukiet"
-          linkUrl="/formularz" />
+          text={cieteText} />
         <ColImg isMobile hasMargin imageUrl={ciete1} imageAlt="" />
         <ColImg isMobile hasMargin imageUrl={ciete2} imageAlt="" />
         <ColImg isMobile hasMargin imageUrl={ciete3} imageAlt="" />

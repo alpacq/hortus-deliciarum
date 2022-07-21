@@ -18,3 +18,12 @@ export const Wrapper = styled.div`
     justify-content: ${({ isCarousel }) => (isCarousel ? "center" : "space-between")};
   }
 `
+
+export const TelephoneParagraph = styled.p`
+  font-size: ${({ theme }) => theme.fontSize.l};
+  font-family: 'Cormorant Garamond';
+  font-weight: 600;
+  line-height: clamp(2.4rem, 2.0308rem + 1.0256vw, 4rem);
+  color: ${({ theme }) => theme.colors.textGreen};
+  text-align: left;
+`

@@ -6,7 +6,7 @@ import OrnamentImg from "../../atoms/OrnamentImg/OrnamentImg"
 import mobileOrnament from "../../../images/mobileOrnament.svg"
 import mobileOrnamentSand from "../../../images/mobileOrnamentSandBig.svg"
 
-const TitledParagraphWithImage = ({ isMobile, isReversed, isFinal, title, text, isGreen, hasButton, hasMobileButton, isMobileButtonUp, isButtonBig, buttonText="", mobileButtonText="", linkUrl="/", isButtonRight, imageUrl, imageAlt }) => {
+const TitledParagraphWithImage = ({ isMobile, isReversed, isFinal, isCutted, title, text, isGreen, hasButton, hasMobileButton, isMobileButtonUp, isButtonBig, buttonText="", mobileButtonText="", linkUrl="/", isButtonRight, imageUrl, imageAlt }) => {
   return (
     <>
       {isReversed ? 
@@ -32,6 +32,7 @@ const TitledParagraphWithImage = ({ isMobile, isReversed, isFinal, title, text, 
       <Wrapper isFinal={isFinal} isMobile={isMobile}>
         <TitledParagraph
           isFinal={isFinal}
+          isCutted={isCutted}
           title={title}
           text={text}
           isGreen={isGreen}
